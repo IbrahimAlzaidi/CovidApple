@@ -16,7 +16,6 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         openFile()
     }
 
@@ -28,4 +27,5 @@ class HomeActivity : AppCompatActivity() {
             val currentLine = parser.parse(it)
         }
     }
+
 }
