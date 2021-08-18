@@ -11,8 +11,11 @@
         <entry key="..\:/pleasegithub/app/src/main/res/drawable/ic_launcher_background.xml" value="0.17314814814814813" />
         <entry key="..\:/pleasegithub/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1125" />
         <entry key="..\:/pleasegithub/app/src/main/res/drawable/ic_medicine_bro.xml" value="0.1648148148148148" />
+        <entry key="..\:/pleasegithub/app/src/main/res/drawable/ic_search.xml" value="0.1125" />
         <entry key="..\:/pleasegithub/app/src/main/res/drawable/navigation_shape.xml" value="0.17314814814814813" />
-        <entry key="..\:/pleasegithub/app/src/main/res/layout/activity_home.xml" value="0.22" />
+        <entry key="..\:/pleasegithub/app/src/main/res/drawable/read_more_shape.xml" value="0.2203125" />
+        <entry key="..\:/pleasegithub/app/src/main/res/drawable/search_shape.xml" value="0.2203125" />
+        <entry key="..\:/pleasegithub/app/src/main/res/layout/activity_home.xml" value="0.1729957805907173" />
         <entry key="..\:/pleasegithub/app/src/main/res/menu/main_button_nav.xml" value="0.20416666666666666" />
         <entry key="..\:/pleasegithub/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1648148148148148" />
         <entry key="..\:/pleasegithub/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1125" />
