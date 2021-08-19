@@ -3,7 +3,7 @@
     <item android:drawable="@color/white"/>
     <item
         android:gravity="center"
-        android:drawable="@drawable/ic_vector_apple"/>
+        android:drawable="@drawable/ic_splash_screen_vector"/>
 
 
 </layer-list>
