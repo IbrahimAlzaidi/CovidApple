@@ -4,9 +4,10 @@
     android:layout_height="match_parent">
 
     <fragment
-        android:id="@+id/home_fragment"
-        android:name="com.example.covidapple.HomeFragment"
+        android:id="@+id/seaerch_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:name="com.example.covidapple.SearchFragment"
         />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
