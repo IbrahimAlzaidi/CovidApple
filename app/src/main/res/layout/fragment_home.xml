@@ -20,10 +20,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="300dp"
         android:layout_height="200dp"
-        android:scaleX="1.5"
         android:elevation="10dp"
+        android:scaleX="1.5"
         android:src="@drawable/hero_image"
         app:layout_constraintBottom_toBottomOf="@+id/image_hero"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,10 +60,9 @@
     <TextView
         android:id="@+id/global_textview"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/small_margin"
         android:paddingStart="@dimen/small_padding"
-        android:paddingTop="@dimen/normal_padding"
         android:text="@string/global_update"
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -82,109 +82,131 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirm_cardview" />
-
+        app:layout_constraintTop_toBottomOf="@+id/confirm_card_view" />
 
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/confirm_cardview"
-        android:layout_width="120dp"
-        android:layout_height="100dp"
+        android:id="@+id/confirm_card_view"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         app:cardCornerRadius="15dp"
         app:cardElevation="8dp"
-        android:layout_marginStart="@dimen/small_margin"
+        app:layout_constraintEnd_toStartOf="@+id/recover_card_view"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/global_textview">
 
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="120dp"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical">
-            <TextView
-                android:id="@+id/confirmed_textview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:text="@string/confirmed"
-                android:textColor="@color/black"
-                android:textSize="12sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/textView7"
-                app:layout_constraintTop_toBottomOf="@+id/image_hero" />
-
-            <TextView
-                android:id="@+id/confirmedNumber_textview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="895"
-                android:textColor="@color/blue"
-                android:textSize="35sp" />
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/recover_cardview"
-        android:layout_width="120dp"
-        android:layout_height="100dp"
-        app:cardCornerRadius="15dp"
-        app:cardElevation="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toEndOf="@+id/confirm_cardview"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/confirm_cardview">
-
-        <androidx.appcompat.widget.LinearLayoutCompat
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/recover_textview"
-                android:layout_width="match_parent"
+                android:id="@+id/confirmed_textview"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="@string/recover"
+                android:text="@string/confirmed"
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/textView7"
-                app:layout_constraintTop_toBottomOf="@+id/image_hero" />
+                app:layout_constraintBottom_toBottomOf="@+id/confirmedNumber_textview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.228" />
 
             <TextView
-                android:id="@+id/recoverNumber_textview"
+                android:id="@+id/confirmedNumber_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="178"
+                android:text="895K+"
+                android:textColor="@color/blue"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.487"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.627" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/recover_card_view"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/confirm_card_view"
+        app:layout_constraintEnd_toStartOf="@+id/death_card_view"
+        app:layout_constraintStart_toEndOf="@+id/confirm_card_view"
+        app:layout_constraintTop_toTopOf="@+id/confirm_card_view">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="98dp"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteX="1dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recover"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.509"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.272" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="80K+"
                 android:textColor="@color/green"
-                android:textSize="35sp" />
-        </androidx.appcompat.widget.LinearLayoutCompat>
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.48"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.627" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView4"
-        android:layout_width="120dp"
-        android:layout_height="100dp"
+        android:id="@+id/death_card_view"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="8dp"
         app:cardCornerRadius="15dp"
         app:cardElevation="8dp"
-        android:layout_marginRight="@dimen/small_margin"
-        app:layout_constraintBottom_toBottomOf="@+id/recover_cardview"
-        app:layout_constraintEnd_toEndOf="@+id/global_textview"
-        app:layout_constraintTop_toBottomOf="@+id/global_textview">
+        app:layout_constraintBottom_toBottomOf="@+id/recover_card_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/recover_card_view"
+        app:layout_constraintTop_toTopOf="@+id/recover_card_view">
 
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="119dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayoutCompat"
+            android:layout_width="98dp"
             android:layout_height="match_parent"
-            android:gravity="center"
-
-            android:orientation="vertical"
-            android:id="@+id/linearLayoutCompat">
+            tools:layout_editor_absoluteX="1dp">
 
             <TextView
                 android:id="@+id/deaths_textview"
@@ -195,11 +217,12 @@
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/textView7"
-                app:layout_constraintTop_toBottomOf="@+id/image_hero"
+                app:layout_constraintBottom_toBottomOf="@+id/deathsNumber_textview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.26999998"
                 tools:layout_conversion_absoluteHeight="16dp"
-                tools:layout_editor_absoluteY="278dp"
-                tools:layout_editor_absoluteX="282dp"
                 tools:layout_conversion_absoluteWidth="119dp" />
 
             <TextView
@@ -207,43 +230,46 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="8k"
+                android:text="8k+"
                 android:textColor="@color/pink"
-                android:textSize="35sp"
-                tools:layout_conversion_absoluteHeight="47dp"
-                tools:layout_editor_absoluteY="294dp"
-                tools:layout_editor_absoluteX="322dp"
-                tools:layout_conversion_absoluteWidth="38dp" />
-        </androidx.appcompat.widget.LinearLayoutCompat>
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.48"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.627" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 
 
     <ScrollView
 
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
         android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/last_update_textview"
-        app:layout_constraintTop_toBottomOf="@+id/last_update_textview"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/last_update_textview">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/small_padding"
             android:clipToPadding="false"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="@dimen/small_padding">
 
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/protection_info"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/small_margin"
                 app:cardCornerRadius="30dp"
-                app:cardElevation="8dp"
-                android:layout_marginBottom="@dimen/small_margin">
+                app:cardElevation="8dp">
 
                 <ImageView
                     android:layout_width="200dp"
@@ -256,20 +282,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="200dp"
-                    android:textColor="@color/black"
                     android:layout_marginTop="@dimen/big_margin"
                     android:text="Learn more about COVID_19 \n #StayHome"
+                    android:textColor="@color/black"
                     android:textSize="18sp" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/reed_me_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/small_padding"
                     android:layout_marginStart="220dp"
                     android:layout_marginTop="120dp"
                     android:background="@drawable/read_more_shape"
                     android:elevation="70dp"
+                    android:padding="@dimen/small_padding"
                     android:text="Read more" />
 
             </androidx.cardview.widget.CardView>
@@ -279,9 +305,9 @@
                 android:id="@+id/cure_info"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                app:cardElevation="8dp"
+                android:scaleType="fitCenter"
                 app:cardCornerRadius="30dp"
-                android:scaleType="fitCenter">
+                app:cardElevation="8dp">
 
                 <ImageView
                     android:layout_width="match_parent"
