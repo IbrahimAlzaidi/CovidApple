@@ -19,7 +19,7 @@ import java.io.InputStreamReader
 class HomeActivity : AppCompatActivity() {
 
     private val fragmentHome = HomeFragment()
-    private val fragemntSearch = SearchFragment()
+    private val fragmentSearch = SearchFragment()
     private val fragmentInfo = InfoFragment()
 
     private lateinit var binding: ActivityHomeBinding
@@ -40,7 +40,7 @@ class HomeActivity : AppCompatActivity() {
                 when(item.itemId){
                     R.id.nav_home -> fragmentHome
                     R.id.nav_info -> fragmentInfo
-                    R.id.nav_search -> fragemntSearch
+                    R.id.nav_search -> fragmentSearch
                     else -> return@setOnItemSelectedListener  false
                 }
             )
