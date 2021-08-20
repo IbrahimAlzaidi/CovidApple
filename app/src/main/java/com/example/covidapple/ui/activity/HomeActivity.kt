@@ -5,11 +5,13 @@ import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import com.example.covidapple.R
+import com.example.covidapple.data.DataManger
 import com.example.covidapple.databinding.ActivityHomeBinding
 import com.example.covidapple.ui.fragments.HomeFragment
 import com.example.covidapple.ui.fragments.InfoFragment
 import com.example.covidapple.ui.fragments.SearchFragment
 import com.example.covidapple.util.CsvParser
+import com.example.covidapple.util.log
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
@@ -57,9 +59,11 @@ class HomeActivity : AppCompatActivity() {
         val inputStream = assets.open("country_vaccinations.csv")
         val buffer = BufferedReader(InputStreamReader(inputStream))
         val parser = CsvParser()
-        buffer.forEachLine {
-            val currentLine = parser.parse(it)
+        buffer.forEachLine { line ->
+            val vaccine = parser.parse(line)
+            DataManger.addVaccine(vaccine)
         }
+        DataManger.searchCountry("Iraq").size.log()
     }
 
 }
