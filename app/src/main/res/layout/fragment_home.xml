@@ -214,16 +214,16 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
+        android:scrollbars="none"
         android:padding="@dimen/small_padding"
         app:layout_constraintEnd_toEndOf="@+id/last_update_textview"
-        app:layout_constraintTop_toBottomOf="@+id/last_update_textview">
+        app:layout_constraintTop_toBottomOf="@+id/last_update_textview"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-
-            >
+            android:layout_height="100dp"
+            android:orientation="vertical">
 
 
             <androidx.cardview.widget.CardView
