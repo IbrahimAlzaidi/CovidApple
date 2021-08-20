@@ -6,9 +6,9 @@
     <string name="confirmed">Confirmed</string>
     <string name="recover">recover</string>
     <string name="deaths">Deaths</string>
-    <string name="homepage">homePage</string>
-    <string name="search">search</string>
-    <string name="info">info</string>
+    <string name="homepage">Home</string>
+    <string name="search">Search</string>
+    <string name="info">Info</string>
 
 
 </resources>

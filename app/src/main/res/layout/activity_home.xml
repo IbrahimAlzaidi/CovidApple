@@ -7,21 +7,21 @@
     tools:context=".ui.activity.HomeActivity"
     >
 
-    <fragment
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:name="com.example.covidapple.ui.fragments.HomeFragment"
         app:layout_constraintBottom_toTopOf="@id/navigation_bar"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navigation_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/navigation_menu"
-        />
+        app:labelVisibilityMode="selected"
+        app:menu="@menu/main_button_nav" />
 
 
 
