@@ -2,7 +2,6 @@ package com.example.covidapple.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import com.example.covidapple.R
 import com.example.covidapple.data.DataManger
@@ -63,7 +62,9 @@ class HomeActivity : AppCompatActivity() {
             val vaccine = parser.parse(line)
             DataManger.addVaccine(vaccine)
         }
-        DataManger.searchCountry("Iraq").size.log()
+        DataManger.getVaccinationMapOfCountry("iraq").log()
+        DataManger.getTotalVaccinationForCountry("iraq").log()
+        DataManger.getTotalVaccinationForAllCountries().log()
     }
 
 }
