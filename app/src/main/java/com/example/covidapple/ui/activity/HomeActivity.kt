@@ -24,6 +24,9 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //set the style back to normal after activating splash screen
+        setTheme(R.style.Theme_CovidApple)
+
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
         openFile()
