@@ -20,8 +20,11 @@
         android:id="@+id/navigation_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/navigation_shape"
         app:layout_constraintBottom_toBottomOf="parent"
         app:labelVisibilityMode="selected"
+        app:itemTextColor="@color/navbar_foreground"
+        app:itemIconTint="@color/navbar_foreground"
         app:menu="@menu/main_button_nav" />
 
 
