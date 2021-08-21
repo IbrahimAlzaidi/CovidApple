@@ -8,6 +8,16 @@
     android:padding="8dp"
     >
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    </ScrollView>
     <TextView
         android:id="@+id/question_text"
         android:layout_width="match_parent"
@@ -24,17 +34,7 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="COVID-19 symptomps \n 1- Fever or chills Cough\n 2-
-Shortness of breath or difficulty breathing
-Fatigue
-Muscle or body aches
-Headache
-New loss of taste or smell
-Sore throat
-Congestion or runny nose
-Nausea or vomiting
-Diarrhea
-"
+        android:text="COVID-19 symptomps \n\n 1- Fever or chills Cough \n 2-Shortness of breath or difficulty breathing Fatigue \n 3- Muscle or body aches \n 4-Headache \n 5- New loss of taste or smell \n 6- Sore throat \n 7- Congestion or runny nose \n 8- Nausea or vomiting Diarrhea"
 
         app:layout_constraintEnd_toEndOf="@+id/question_text"
         app:layout_constraintHorizontal_bias="0.0"
@@ -55,11 +55,8 @@ Diarrhea
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="COVID-19 prevention\n\n 1. Wash your hands frequently and \n carefully    \n 2. Avoid touching your face \n 3. Stop shaking hands and hugging people — for now \n 4. Don’t share personal items \n 5. Cover your mouth and nose when you cough and sneeze \n 6. Clean and disinfect surfaces"
 
-        android:text="COVID-19 prevention\n 1. Wash your hands frequently and carefully\n
-        2. Avoid touching your face\n 3. Stop shaking hands and hugging people — for now\n4. Don’t share personal items\n5. Cover your mouth and nose when you cough and sneeze\n6. Clean and disinfect surfaces
-
-"
         android:layout_marginTop="@dimen/small_margin"
         style="@style/expanded_card_style"
         app:layout_constraintEnd_toEndOf="@+id/textView"
