@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#236C76"
+    android:background="@color/green_dark"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -150,7 +150,6 @@
             android:id="@+id/deaths_card"
             android:layout_width="100dp"
             android:layout_height="80dp"
-
             app:cardCornerRadius="15dp"
             app:cardElevation="8dp"
             app:layout_constraintBottom_toBottomOf="@+id/confirm_card"
@@ -184,7 +183,6 @@
                     android:textSize="35sp" />
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.cardview.widget.CardView>
-
 
         <TextView
             android:id="@+id/last_update_text"
