@@ -15,9 +15,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
 
-
-    </ScrollView>
     <TextView
         android:id="@+id/question_text"
         android:layout_width="match_parent"
@@ -31,6 +34,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:paddingTop="@dimen/small_padding"
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -359,4 +363,9 @@
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>d
