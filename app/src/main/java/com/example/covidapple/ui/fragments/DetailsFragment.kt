@@ -16,6 +16,7 @@ class DetailsFragment:BaseFragment<FragmentDetailsBinding>() {
 
     override fun setup() {
         addExpandAbilty(binding?.textView, binding?.readMoreSymptomps)
+        addExpandAbilty(binding?.textView2, binding?.readMorePrevention)
     }
 
     override fun addCallBack() {
