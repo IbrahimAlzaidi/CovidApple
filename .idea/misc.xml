@@ -17,6 +17,9 @@
         <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/drawable/rec_white_shape.xml" value="0.2203125" />
         <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/drawable/search_shape.xml" value="0.17314814814814813" />
         <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/layout/activity_home.xml" value="0.18" />
+        <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/layout/fragment_info.xml" value="0.20416666666666666" />
+        <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/layout/fragment_search.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/menu/main_button_nav.xml" value="0.20416666666666666" />
       </map>
     </option>
