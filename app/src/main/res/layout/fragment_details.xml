@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#236C76"
+    android:background="@color/color_dark"
     android:padding="8dp"
     >
 
@@ -23,9 +23,10 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/prevention"
-        android:padding="12dp"
+        android:paddingHorizontal="12dp"
+        android:paddingTop="12dp"
         android:text="COVID-19 symptomps \n * Fever or chills
 Cough
 Shortness of breath or difficulty breathing
@@ -38,12 +39,24 @@ Congestion or runny nose
 Nausea or vomiting
 Diarrhea
 "
+        android:paddingBottom="30dp"
+        android:maxLines="2"
+        android:ellipsize="end"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/question_text"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/question_text"
         app:layout_constraintTop_toBottomOf="@+id/question_text" />
+
+    <TextView
+        android:id="@+id/read_more_symptomps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Read more"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView2"
