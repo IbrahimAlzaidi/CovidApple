@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/color_dark"
-    android:padding="8dp"
+    android:padding="@dimen/small_padding"
     >
 
     <ScrollView
@@ -17,172 +16,164 @@
         app:layout_constraintTop_toTopOf="parent">
 <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     >
 
     <TextView
         android:id="@+id/question_text"
         android:layout_width="match_parent"
-        android:layout_height="130dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Do you need help? \nCOVID-19"
+        android:text="@string/question_text"
         android:textColor="@color/white"
-        android:textSize="30sp"
+        android:textSize="@dimen/big_text_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:paddingTop="@dimen/small_padding"
-        android:id="@+id/textView"
+        android:id="@+id/symptoms_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="COVID-19 symptomps \n\n 1- Fever or chills Cough \n 2-Shortness of breath or difficulty breathing Fatigue \n 3- Muscle or body aches \n 4-Headache \n 5- New loss of taste or smell \n 6- Sore throat \n 7- Congestion or runny nose \n 8- Nausea or vomiting Diarrhea"
-
+        android:text="@string/Symptoms"
+        android:layout_marginTop="@dimen/big_margin"
         app:layout_constraintEnd_toEndOf="@+id/question_text"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/question_text"
         app:layout_constraintTop_toBottomOf="@+id/question_text"
         style="@style/expanded_card_style" />
 
     <TextView
-        android:id="@+id/read_more_symptomps"
+        android:id="@+id/read_more_symptoms"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Read more"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="@+id/textView" />
+        android:text="@string/read_more"
+        android:layout_marginEnd="@dimen/normal_margin"
+        app:layout_constraintBottom_toBottomOf="@+id/symptoms_text"
+        app:layout_constraintEnd_toEndOf="@+id/symptoms_text" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/prevention_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="COVID-19 prevention\n\n 1. Wash your hands frequently and \n carefully    \n 2. Avoid touching your face \n 3. Stop shaking hands and hugging people — for now \n 4. Don’t share personal items \n 5. Cover your mouth and nose when you cough and sneeze \n 6. Clean and disinfect surfaces"
-
-        android:layout_marginTop="@dimen/small_margin"
+        android:text="@string/prevention"
+        android:layout_marginTop="@dimen/big_margin"
         style="@style/expanded_card_style"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintEnd_toEndOf="@+id/symptoms_text"
+        app:layout_constraintStart_toStartOf="@+id/symptoms_text"
+        app:layout_constraintTop_toBottomOf="@+id/symptoms_text" />
     <TextView
         android:id="@+id/read_more_prevention"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="@+id/textView2"
-        android:layout_marginEnd="16dp"
-        android:text="Read more"
+        app:layout_constraintBottom_toBottomOf="@+id/prevention_text"
+        app:layout_constraintEnd_toEndOf="@+id/prevention_text"
+        android:layout_marginEnd="@dimen/normal_margin"
+        android:text="@string/read_more"
         />
 
     <TextView
-        android:id="@+id/top_countries"
+        android:id="@+id/types_of_vaccinations"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="types of vaccinations"
+        android:text="@string/types_of_vaccinations"
         android:textColor="@color/white"
-        android:layout_marginTop="20dp"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        android:layout_marginTop="@dimen/big_margin"
+        android:textSize="@dimen/big_text_size"
+        app:layout_constraintEnd_toEndOf="@+id/prevention_text"
+        app:layout_constraintStart_toStartOf="@+id/prevention_text"
+        app:layout_constraintTop_toBottomOf="@+id/prevention_text" />
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/top_countries"
-        app:layout_constraintStart_toStartOf="@+id/top_countries"
-        app:layout_constraintTop_toBottomOf="@+id/top_countries">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/big_margin"
+        app:layout_constraintEnd_toEndOf="@+id/types_of_vaccinations"
+        app:layout_constraintStart_toStartOf="@+id/types_of_vaccinations"
+        app:layout_constraintTop_toBottomOf="@+id/types_of_vaccinations">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/vaccine1_card"
-                android:layout_width="100dp"
-                android:layout_height="140dp"
-                android:layout_marginStart="12dp"
+                android:id="@+id/card_vaccine_pfizer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_margin"
                 android:background="@drawable/rec_green_shape"
-                android:padding="10dp"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="8dp">
+                android:padding="@dimen/small_padding"
+                app:cardCornerRadius="@dimen/small_card_radius"
+                app:cardElevation="@dimen/small_elevation">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/prevention"
                     android:orientation="vertical"
-                    android:padding="20dp">
+                    android:padding="@dimen/normal_padding">
 
                     <TextView
-                        android:id="@+id/vaccine1"
+                        android:id="@+id/vaccine_pfizer"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-                        android:text="Pfizer"
+                        android:text="@string/pfizer"
                         android:textColor="@color/black"
-                        android:textSize="12sp"
+                        android:textSize="@dimen/small_text_size"
                         android:textStyle="bold"
-                        android:layout_marginBottom="20dp"/>
+                        android:layout_marginBottom="@dimen/normal_padding"/>
 
                     <ImageView
-                        android:id="@+id/vaccine1_image"
+                        android:id="@+id/image_pfizer"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:layout_gravity="center"
                         android:background="@drawable/pfizer_ic"
-                        android:gravity="center"
-                        android:textColor="@color/teal_200"
-                        android:textSize="35sp" />
+
+                     />
 
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/vaccine2_card"
-                android:layout_width="100dp"
-                android:layout_height="140dp"
-                android:layout_marginStart="12dp"
+                android:id="@+id/card_vaccine_astrazeneca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_margin"
                 android:background="@drawable/rec_green_shape"
-                android:padding="10dp"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="8dp">
+                android:padding="@dimen/small_padding"
+                app:cardCornerRadius="@dimen/small_card_radius"
+                app:cardElevation="@dimen/small_elevation">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/prevention"
                     android:orientation="vertical"
-                    android:padding="20dp">
+                    android:padding="@dimen/normal_padding">
 
                     <TextView
-                        android:id="@+id/vaccine2"
-                        android:layout_width="70dp"
+                        android:id="@+id/vaccine_AstraZeneca"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-                        android:text="AstraZeneca"
+                        android:text="@string/astrazeneca"
                         android:textColor="@color/black"
-                        android:textSize="12sp"
+                        android:textSize="@dimen/small_text_size"
                         android:textStyle="bold"
-                        android:layout_marginBottom="20dp"
+                        android:layout_marginBottom="@dimen/normal_padding"
                         />
 
                     <ImageView
-                        android:id="@+id/vaccine2_image"
+                        android:id="@+id/image_astrazeneca"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:layout_gravity="center"
                         android:background="@drawable/astraceneca_ic"
-                        android:gravity="center"
-                        android:textColor="@color/teal_200"
-                        android:textSize="35sp" />
+                         />
 
 
                 </LinearLayout>
@@ -190,42 +181,40 @@
 
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/vaccine3_card"
-                android:layout_width="100dp"
-                android:layout_height="140dp"
-                android:layout_marginStart="12dp"
+                android:id="@+id/card_vaccine_moderna"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_margin"
                 android:background="@drawable/rec_green_shape"
-                android:padding="10dp"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="8dp">
+                android:padding="@dimen/normal_padding"
+                app:cardCornerRadius="@dimen/small_card_radius"
+                app:cardElevation="@dimen/small_elevation">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/prevention"
                     android:orientation="vertical"
-                    android:padding="20dp">
+                    android:padding="@dimen/normal_padding">
 
                     <TextView
-                        android:id="@+id/vaccine3"
+                        android:id="@+id/vaccine_modern"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-                        android:text="Moderna"
+                        android:text="@string/moderna"
                         android:textColor="@color/black"
-                        android:textSize="12sp"
+                        android:textSize="@dimen/small_text_size"
                         android:textStyle="bold"
                         android:layout_marginBottom="20dp"/>
 
                     <ImageView
-                        android:id="@+id/vaccine3_image"
+                        android:id="@+id/image_vaccine_modern"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_gravity="center"
                         android:background="@drawable/moderna_ic"
-                        android:gravity="center"
-                        android:textColor="@color/teal_200"
-                        android:textSize="35sp" />
+                        />
 
 
                 </LinearLayout>
@@ -233,84 +222,79 @@
 
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/vaccine4_card"
-                android:layout_width="100dp"
-                android:layout_height="140dp"
-                android:layout_marginStart="12dp"
+                android:id="@+id/card_vaccine_Johnson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_margin"
                 android:background="@drawable/rec_green_shape"
-                android:padding="10dp"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="8dp">
+                android:padding="@dimen/small_padding"
+                app:cardCornerRadius="@dimen/small_card_radius"
+                app:cardElevation="@dimen/small_elevation">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="140dp"
                     android:background="@drawable/prevention"
                     android:orientation="vertical"
-                    android:padding="20dp">
+                    android:padding="@dimen/normal_padding">
 
                     <TextView
-                        android:id="@+id/vaccine4"
-                        android:layout_width="match_parent"
+                        android:id="@+id/vaccine_Johnson"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-                        android:text="Johnson &amp; Johnson"
+                        android:text="@string/johnson_and_johnson"
                         android:textColor="@color/black"
-                        android:textSize="12sp"
-                        android:layout_marginBottom="20dp"
+                        android:textSize="@dimen/small_text_size"
+                        android:layout_marginBottom="@dimen/normal_margin"
                         android:textStyle="bold" />
 
                     <ImageView
-                        android:id="@+id/vaccine4_image"
+                        android:id="@+id/image_vaccine_Johnson"
                         android:layout_width="60dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/ic_johnson_and_johnson"
-                        android:gravity="center"
-                        android:textColor="@color/teal_200"
-                        android:textSize="35sp" />
+                        android:layout_height="30dp"
+                        android:background="@drawable/ic_johnson_and_johnson" android:gravity="center"
+                        />
 
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/vaccine5_card"
-                android:layout_width="100dp"
+                android:id="@+id/card_vaccine_sinopharm"
+                android:layout_width="wrap_content"
                 android:layout_height="140dp"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="@dimen/small_margin"
                 android:background="@drawable/rec_green_shape"
-                android:padding="10dp"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="8dp">
+                android:padding="@dimen/small_padding"
+                app:cardCornerRadius="@dimen/small_card_radius"
+                app:cardElevation="@dimen/small_elevation">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@drawable/prevention"
                     android:orientation="vertical"
-                    android:padding="20dp">
+                    android:padding="@dimen/normal_padding">
 
                     <TextView
-                        android:id="@+id/vaccine5"
-                        android:layout_width="match_parent"
+                        android:id="@+id/vaccine_sinopharm"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-                        android:text="sinopharm "
+                        android:text="@string/sinopharm"
                         android:textColor="@color/black"
-                        android:textSize="12sp"
+                        android:textSize="@dimen/small_text_size"
                         android:textStyle="bold"
-                        android:layout_marginBottom="20dp"/>
+                        android:layout_marginBottom="@dimen/small_margin"/>
 
                     <ImageView
-                        android:id="@+id/vaccine5_image"
+                        android:id="@+id/image_vaccine_sinopharm"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_gravity="center"
                         android:background="@drawable/ic_sinopharm"
-                        android:gravity="center"
-                        android:textColor="@color/teal_200"
-                        android:textSize="35sp" />
+                         />
 
 
                 </LinearLayout>
@@ -318,42 +302,39 @@
 
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/vaccine6_card"
-                android:layout_width="100dp"
+                android:id="@+id/card_vaccine_apple"
+                android:layout_width="wrap_content"
                 android:layout_height="140dp"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="@dimen/small_margin"
                 android:background="@drawable/rec_green_shape"
-                android:padding="10dp"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="8dp">
+                android:padding="@dimen/small_padding"
+                app:cardCornerRadius="@dimen/small_card_radius"
+                app:cardElevation="@dimen/small_elevation">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:background="@drawable/prevention"
                     android:orientation="vertical"
-                    android:padding="20dp">
+                    android:padding="@dimen/normal_padding">
 
                     <TextView
-                        android:id="@+id/vaccine6"
+                        android:id="@+id/vaccine_apple"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-                        android:text="Green Apple Team "
+                        android:text="@string/my_team"
                         android:textColor="@color/black"
-                        android:textSize="12sp"
+                        android:textSize="@dimen/small_text_size"
                         android:textStyle="bold" />
 
                     <ImageView
-                        android:id="@+id/vaccine6_image"
-                        android:layout_width="52dp"
-                        android:layout_height="49dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/ic_doctor_pana"
-                        android:gravity="center"
-                        android:textColor="@color/teal_200"
-                        android:textSize="35sp" />
-
+                        android:id="@+id/image_vaccine_apple"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="@dimen/normal_margin"
+                        android:background="@drawable/ic_apple"
+                />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

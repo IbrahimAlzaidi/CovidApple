@@ -15,8 +15,8 @@ class DetailsFragment:BaseFragment<FragmentDetailsBinding>() {
         get() = FragmentDetailsBinding::inflate
 
     override fun setup() {
-        addExpandAbilty(binding?.textView, binding?.readMoreSymptomps)
-        addExpandAbilty(binding?.textView2, binding?.readMorePrevention)
+        addExpandAbilty(binding?.symptomsText, binding?.readMoreSymptoms)
+        addExpandAbilty(binding?.preventionText, binding?.readMorePrevention)
     }
 
     override fun addCallBack() {
