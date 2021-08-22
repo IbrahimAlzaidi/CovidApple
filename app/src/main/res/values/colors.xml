@@ -12,7 +12,11 @@
     <color name="blue">#0E95F6</color>
     <color name="green">#0DD345</color>
     <color name="pink">#f8477f</color>
+<<<<<<< HEAD
     <color name="green_dark">#236C76</color>
     <color name="red">#E53935</color>
 
+=======
+    <color name="color_dark">#236C76</color>
+>>>>>>> 37e14d7c3dba4dbd30cff592532643f727a642d6
 </resources>

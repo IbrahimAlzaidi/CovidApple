@@ -2,6 +2,7 @@
 <resources>
     <dimen name="small_padding">12dp</dimen>
     <dimen name="small_margin">12dp</dimen>
+<<<<<<< HEAD
     <dimen name="normal_padding">24dp</dimen>
     <dimen name="big_margin">36dp</dimen>
     <dimen name="small_card_radius">15dp</dimen>
@@ -11,4 +12,13 @@
     <dimen name="x2_big_margin">60dp</dimen>
     <dimen name="normal_margin">24dp</dimen>
     <dimen name="normal_text_size">24sp</dimen>
+=======
+    <dimen name="normal_padding">20dp</dimen>
+    <dimen name="big_margin">36dp</dimen>
+    <dimen name="big_text_size">30sp</dimen>
+    <dimen name="normal_margin">16dp</dimen>
+    <dimen name="small_card_radius">16dp</dimen>
+    <dimen name="small_elevation">8dp</dimen>
+    <dimen name="small_text_size">12sp</dimen>
+>>>>>>> 37e14d7c3dba4dbd30cff592532643f727a642d6
 </resources>

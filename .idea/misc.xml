@@ -18,11 +18,18 @@
         <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/drawable/search_shape.xml" value="0.17314814814814813" />
         <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/layout/activity_home.xml" value="0.18" />
         <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/layout/fragment_details.xml" value="0.22" />
+<<<<<<< HEAD
         <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/layout/fragment_info.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/layout/fragment_search.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/menu/main_button_nav.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2203125" />
+=======
+        <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/layout/fragment_info.xml" value="0.20416666666666666" />
+        <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/layout/fragment_search.xml" value="0.20416666666666666" />
+        <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/menu/main_button_nav.xml" value="0.20416666666666666" />
+>>>>>>> 37e14d7c3dba4dbd30cff592532643f727a642d6
       </map>
     </option>
   </component>

@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import com.example.covidapple.R
 import com.example.covidapple.data.DataManger
 import com.example.covidapple.databinding.ActivityHomeBinding
+import com.example.covidapple.ui.fragments.DetailsFragment
 import com.example.covidapple.ui.fragments.HomeFragment
 import com.example.covidapple.ui.fragments.InfoFragment
 import com.example.covidapple.ui.fragments.SearchFragment
@@ -21,6 +22,7 @@ class HomeActivity : AppCompatActivity() {
     private val fragmentHome = HomeFragment()
     private val fragemntSearch = SearchFragment()
     private val fragmentInfo = InfoFragment()
+    private val fragmentDetails = DetailsFragment()
 
     private lateinit var binding: ActivityHomeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,6 +43,7 @@ class HomeActivity : AppCompatActivity() {
                     R.id.nav_home -> fragmentHome
                     R.id.nav_info -> fragmentInfo
                     R.id.nav_search -> fragemntSearch
+                    R.id.nav_details -> fragmentDetails
                     else -> return@setOnItemSelectedListener  false
                 }
             )
