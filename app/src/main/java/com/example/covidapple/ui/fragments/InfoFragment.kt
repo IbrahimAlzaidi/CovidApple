@@ -14,6 +14,5 @@ class InfoFragment:BaseFragment<FragmentInfoBinding>() {
     }
 
     override fun addCallBack() {
-
     }
 }
