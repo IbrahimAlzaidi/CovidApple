@@ -9,6 +9,7 @@
         <entry key="..\:/pleaseGithub/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
         <entry key="..\:/pleaseGithub/app/src/main/res/drawable-v24/ic_programmer.xml" value="0.2703125" />
         <entry key="..\:/pleaseGithub/app/src/main/res/drawable-v24/ic_woman.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable-v24/search_info_shape.xml" value="0.2703125" />
         <entry key="..\:/pleaseGithub/app/src/main/res/drawable-v24/social_media_shape.xml" value="0.2703125" />
         <entry key="..\:/pleaseGithub/app/src/main/res/drawable/astraceneca_ic.xml" value="0.2703125" />
         <entry key="..\:/pleaseGithub/app/src/main/res/drawable/card_shape.xml" value="0.2703125" />
@@ -26,7 +27,9 @@
         <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_photo_2021_08_21_16_18_30.xml" value="0.2703125" />
         <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_search.xml" value="0.2703125" />
         <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_sinopharm.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_spalsh_doctor.xml" value="0.14635416666666667" />
         <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_splash.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_splash_doctor.xml" value="0.14635416666666667" />
         <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_splash_screen_image.xml" value="0.2703125" />
         <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_splash_screen_vector.xml" value="0.2703125" />
         <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_syringe.xml" value="0.2703125" />
@@ -35,6 +38,7 @@
         <entry key="..\:/pleaseGithub/app/src/main/res/drawable/moderna_ic.xml" value="0.2703125" />
         <entry key="..\:/pleaseGithub/app/src/main/res/drawable/navigation_shape.xml" value="0.2703125" />
         <entry key="..\:/pleaseGithub/app/src/main/res/drawable/read_more_shape.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/rec_white_shape.xml" value="0.2703125" />
         <entry key="..\:/pleaseGithub/app/src/main/res/drawable/search_shape.xml" value="0.2703125" />
         <entry key="..\:/pleaseGithub/app/src/main/res/drawable/social_media_shape.xml" value="0.2703125" />
         <entry key="..\:/pleaseGithub/app/src/main/res/drawable/splash_screen.xml" value="0.2703125" />
