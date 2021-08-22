@@ -9,6 +9,13 @@
     <string name="homepage">Home</string>
     <string name="search">Search</string>
     <string name="info">Info</string>
+    <string name="see_more" translatable="false">Learn more about COVID_19 \n #StayHome</string>
+    <string name="learn_more">learn more</string>
+    <string name="num_of_confirmed">895</string>
+    <string name="num_of_deaths">895</string>
+    <string name="top_countries">Top countries</string>
+    <string name="num_of_recover">895</string>
+
 
 
 </resources>
