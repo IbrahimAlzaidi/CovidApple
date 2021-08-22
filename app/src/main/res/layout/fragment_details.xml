@@ -253,6 +253,8 @@
                         android:id="@+id/image_vaccine_Johnson"
                         android:layout_width="60dp"
                         android:layout_height="30dp"
+                        android:layout_marginTop="@dimen/small_margin"
+                        android:layout_gravity="center"
                         android:background="@drawable/ic_johnson_and_johnson" android:gravity="center"
                         />
 
@@ -320,7 +322,7 @@
 
                     <TextView
                         android:id="@+id/vaccine_apple"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:text="@string/my_team"
@@ -331,6 +333,7 @@
                     <ImageView
                         android:id="@+id/image_vaccine_apple"
                         android:layout_width="60dp"
+                        android:layout_gravity="center"
                         android:layout_height="60dp"
                         android:layout_marginTop="@dimen/normal_margin"
                         android:background="@drawable/ic_apple"
