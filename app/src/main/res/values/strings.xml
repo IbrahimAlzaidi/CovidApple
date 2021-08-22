@@ -26,4 +26,13 @@
     <string name="johnson_and_johnson"><![CDATA[Johnson & Johnson]]></string>
     <string name="moderna">Moderna</string>
     <string name="types_of_vaccinations">types of vaccinations</string>
+    <string name="project_description">This project is brought to you by\ngreen apple Team</string>
+    <string name="name_ibrahim">Ibrahim Al-Zaidi</string>
+    <string name="team_leader_description">Team leader of Apple team</string>
+    <string name="name_ayman">Aymn S. Al-Arrak</string>
+    <string name="team_member_description">Team Member of Apple team</string>
+    <string name="name_rafal">Rafal A</string>
+    <string name="name_basheer">Basheer Sameer</string>
+    <string name="name_huda">Huda Al_janaby</string>
+    <string name="credits">Credits</string>
 </resources>
