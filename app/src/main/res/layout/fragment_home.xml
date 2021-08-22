@@ -7,14 +7,37 @@
     android:background="@color/green_dark">
 
     <ImageView
+        android:id="@+id/hero_image_background"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:src="@drawable/ic_virus_hero"
-        android:scaleType="centerCrop"
+        android:scaleType="fitStart"
+        android:src="@drawable/ic_heroooo"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:text="Covid App\n By team green apple"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/x2_big_margin"
+        android:layout_marginStart="@dimen/small_margin"
+        android:textSize="@dimen/small_than_normal_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/hero_image_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="fitEnd"
+        android:src="@drawable/hero_image"
+        app:layout_constraintBottom_toBottomOf="@+id/hero_image_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/hero_image_background" />
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
@@ -103,7 +126,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:text="@string/confirmed"
-                    android:textColor="@color/black"
+                    android:textColor="@color/green_dark"
                     android:textSize="@dimen/small_text_size"
                     android:textStyle="bold" />
 
@@ -113,7 +136,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/num_of_confirmed"
                     android:textColor="@color/blue"
-                    android:textSize="@dimen/normal_text_size" />
+                    android:textSize="@dimen/small_than_normal_text_size" />
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.cardview.widget.CardView>
 
@@ -141,7 +164,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:text="@string/recover"
-                    android:textColor="@color/black"
+                    android:textColor="@color/green_dark"
                     android:textSize="@dimen/small_text_size"
                     android:textStyle="bold" />
 
@@ -152,7 +175,7 @@
                     android:gravity="center"
                     android:text="@string/num_of_recover"
                     android:textColor="@color/green"
-                    android:textSize="@dimen/normal_text_size" />
+                    android:textSize="@dimen/small_than_normal_text_size" />
             </androidx.appcompat.widget.LinearLayoutCompat>
 
         </androidx.cardview.widget.CardView>
@@ -180,7 +203,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/deaths"
-                    android:textColor="@color/black"
+                    android:textColor="@color/green_dark"
                     android:textSize="@dimen/small_text_size"
                     android:textStyle="bold" />
 
@@ -191,7 +214,7 @@
                     android:gravity="center"
                     android:text="@string/num_of_deaths"
                     android:textColor="@color/red"
-                    android:textSize="@dimen/normal_text_size" />
+                    android:textSize="@dimen/small_than_normal_text_size" />
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.cardview.widget.CardView>
 
@@ -272,20 +295,22 @@
                             android:textStyle="bold" />
 
                         <ImageView
+                            android:layout_marginTop="@dimen/small_margin"
                             android:id="@+id/first_country_flag"
-                            android:layout_width="60dp"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/ic_doctor_pana"
+                            android:layout_width="48dp"
+                            android:layout_gravity="center"
+                            android:layout_height="32dp"
+                            android:background="@drawable/ic_frenchflagframed"
                             android:textColor="@color/teal_200"
                             />
 
                         <TextView
                             android:id="@+id/first_country_number"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="20dp"
                             android:gravity="center_horizontal"
                             android:text="1.4M"
-                            android:layout_marginTop="@dimen/small_margin"
+                            android:elevation="@dimen/small_elevation"
                             android:textColor="@color/white"
                             android:textSize="@dimen/small_text_size"
                             android:textStyle="bold" />
@@ -313,16 +338,18 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:text="USA"
+                            android:text="Italy"
                             android:textColor="@color/white"
                             android:textSize="@dimen/small_text_size"
                             android:textStyle="bold" />
 
                         <ImageView
                             android:id="@+id/second_country_flag"
-                            android:layout_width="60dp"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/ic_doctor_pana" />
+                            android:layout_width="48dp"
+                            android:layout_marginTop="@dimen/small_margin"
+                            android:layout_gravity="center"
+                            android:layout_height="32dp"
+                            android:background="@drawable/ic__italy__lauris_kaplinski_01" />
 
                         <TextView
                             android:id="@+id/second_country_number"
@@ -330,7 +357,6 @@
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
                             android:text="1.4M"
-                            android:layout_marginTop="@dimen/small_text_size"
                             android:textColor="@color/white"
                             android:textSize="@dimen/small_text_size"
                             android:textStyle="bold" />
@@ -358,16 +384,17 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:text="USA"
+                            android:text="Turkey "
                             android:textColor="@color/white"
                             android:textSize="@dimen/small_text_size"
                             android:textStyle="bold" />
 
                         <ImageView
                             android:id="@+id/third_country_flag"
-                            android:layout_width="60dp"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/ic_doctor_pana"
+                            android:layout_width="48dp"
+                            android:layout_marginTop="@dimen/small_margin"
+                            android:layout_height="32dp"
+                            android:background="@drawable/ic_eer_flag_of_turkey"
                           />
                         <TextView
                             android:id="@+id/third_country_number"
@@ -375,7 +402,6 @@
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
                             android:text="1.4M"
-                            android:layout_marginTop="@dimen/small_margin"
                             android:textColor="@color/white"
                             android:textSize="@dimen/small_text_size"
                             android:textStyle="bold" />
@@ -403,16 +429,17 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:text="USA"
+                            android:text="Russia"
                             android:textColor="@color/white"
                             android:textSize="@dimen/small_text_size"
                             android:textStyle="bold" />
 
                         <ImageView
                             android:id="@+id/fourth_country_flag"
-                            android:layout_width="60dp"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/ic_doctor_pana"
+                            android:layout_width="48dp"
+                            android:layout_marginTop="@dimen/small_margin"
+                            android:layout_height="32dp"
+                            android:background="@drawable/ic_flag_of_russia_2016081417"
                          />
 
                         <TextView
@@ -421,7 +448,6 @@
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
                             android:text="1.4M"
-                            android:layout_marginTop="@dimen/small_margin"
                             android:textColor="@color/white"
                             android:textSize="@dimen/small_text_size"
                             android:textStyle="bold" />
@@ -448,16 +474,17 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:text="USA"
+                            android:text="India "
                             android:textColor="@color/white"
                             android:textSize="@dimen/small_text_size"
                             android:textStyle="bold" />
 
                         <ImageView
                             android:id="@+id/fifth_country_flag"
-                            android:layout_width="60dp"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/ic_doctor_pana" />
+                            android:layout_width="48dp"
+                            android:layout_marginTop="@dimen/small_margin"
+                            android:layout_height="32dp"
+                            android:background="@drawable/ic_flag_of_india" />
 
                         <TextView
                             android:id="@+id/fifth_country_number"
@@ -465,7 +492,6 @@
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
                             android:text="1.4M"
-                            android:layout_marginTop="@dimen/small_margin"
                             android:textColor="@color/white"
                             android:textSize="@dimen/small_text_size"
                             android:textStyle="bold" />
