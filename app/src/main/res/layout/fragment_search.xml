@@ -5,13 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- TODO: replace with search ui here -->
     <SearchView
         android:id="@+id/search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:background="@drawable/rec"
         android:elevation="@dimen/cardview_default_elevation"
         android:focusable="auto"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,10 +23,22 @@
         android:textColorHint="@android:color/darker_gray" />
 
 
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The Daily Vaccinated People"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/pie_chart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search" />
+
     <org.eazegraph.lib.charts.PieChart
+        android:id="@+id/pie_chart"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:id="@+id/pie_chart"
+        android:layout_marginBottom="24dp"
         android:padding="8dp"
         app:egLegendTextSize="18sp"
         app:egUsePieRotation="true"

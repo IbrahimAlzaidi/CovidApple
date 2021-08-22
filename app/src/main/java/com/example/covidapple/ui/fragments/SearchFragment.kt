@@ -4,6 +4,7 @@ import android.graphics.Color
 import android.view.LayoutInflater
 import android.widget.SearchView
 import com.example.covidapple.data.DataManger
+
 import com.example.covidapple.databinding.FragmentSearchBinding
 import org.eazegraph.lib.models.PieModel
 import kotlin.random.Random
@@ -34,7 +35,7 @@ class SearchFragment:BaseFragment<FragmentSearchBinding>() {
              DataManger.getVaccinationMapOfCountry(country).forEach { (t, u) ->
                 binding?.pieChart?.addPieSlice(u?.toFloat()?.let {
                     PieModel(t,
-                        it, Color.argb(255, Random.nextInt(0, 255), Random.nextInt(0, 255), Random.nextInt(0, 255)))
+                        it, Color.argb(255, Random.nextInt(50, 200), Random.nextInt(50, 250), Random.nextInt(50, 250)))
                 })
             }
             binding?.pieChart?.startAnimation()
@@ -42,5 +43,4 @@ class SearchFragment:BaseFragment<FragmentSearchBinding>() {
         }
         return false
     }
-
 }
