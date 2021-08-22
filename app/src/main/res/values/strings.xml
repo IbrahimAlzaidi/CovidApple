@@ -9,15 +9,12 @@
     <string name="homepage">Home</string>
     <string name="search">Search</string>
     <string name="info">Info</string>
-<<<<<<< HEAD
     <string name="see_more" translatable="false">Learn more about COVID_19 \n #StayHome</string>
     <string name="learn_more">learn more</string>
     <string name="num_of_confirmed">895</string>
     <string name="num_of_deaths">895</string>
     <string name="top_countries">Top countries</string>
     <string name="num_of_recover">895</string>
-
-=======
     <string name="question_text">Do you need help? \nCOVID-19</string>
     <string name="Symptoms">COVID-19 Symptoms \n\n 1- Fever or chills Cough \n 2-Shortness of breath or difficulty breathing Fatigue \n 3- Muscle or body aches \n 4-Headache \n 5- New loss of taste or smell \n 6- Sore throat \n 7- Congestion or runny nose \n 8- Nausea or vomiting Diarrhea</string>
     <string name="prevention">COVID-19 prevention\n\n 1. Wash your hands frequently and \n carefully \n 2. Avoid touching your face \n 3. Stop shaking hands and hugging people — for now \n 4. Don’t share personal items \n 5. Cover your mouth and nose when you cough and sneeze \n 6. Clean and disinfect surfaces</string>
@@ -29,7 +26,4 @@
     <string name="johnson_and_johnson"><![CDATA[Johnson & Johnson]]></string>
     <string name="moderna">Moderna</string>
     <string name="types_of_vaccinations">types of vaccinations</string>
->>>>>>> 37e14d7c3dba4dbd30cff592532643f727a642d6
-
-
 </resources>
