@@ -67,4 +67,5 @@ class HomeActivity : AppCompatActivity() {
         DataManger.getTotalVaccinationForAllCountries().log()
     }
 
+
 }
