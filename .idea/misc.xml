@@ -4,25 +4,52 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidProjectsTut/CovidApple/app/src/main/res/layout/activity_home.xml" value="0.22826086956521738" />
-        <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/drawable/astraceneca_ic.xml" value="0.2169230769230769" />
-        <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/drawable/card_shape.xml" value="0.2203125" />
-        <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/drawable/ic_doctor_pana.xml" value="0.2169230769230769" />
-        <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/drawable/ic_johnson_and_johnson.xml" value="0.2169230769230769" />
-        <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/drawable/ic_search.xml" value="0.2169230769230769" />
-        <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/drawable/ic_sinopharm.xml" value="0.2169230769230769" />
-        <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/drawable/moderna_ic.xml" value="0.2169230769230769" />
-        <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/drawable/pfizer_ic.xml" value="0.2169230769230769" />
-        <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/drawable/prevention.xml" value="0.2169230769230769" />
-        <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/drawable/rec_green_shape.xml" value="0.2169230769230769" />
-        <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/drawable/rec_white_shape.xml" value="0.2203125" />
-        <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/drawable/search_shape.xml" value="0.17314814814814813" />
-        <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/layout/activity_home.xml" value="0.18" />
-        <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/layout/fragment_details.xml" value="0.22" />
-        <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/layout/fragment_home.xml" value="0.25" />
-        <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/layout/fragment_info.xml" value="0.20416666666666666" />
-        <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/layout/fragment_search.xml" value="0.20416666666666666" />
-        <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/menu/main_button_nav.xml" value="0.20416666666666666" />
-        <entry key="..\:/AndroidStuioProjects/CovidApple/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2203125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable-v24/ic_github.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable-v24/ic_hacker.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable-v24/ic_programmer.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable-v24/ic_woman.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable-v24/search_info_shape.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable-v24/social_media_shape.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/astraceneca_ic.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/card_shape.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/hero_image.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_apple.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_doctor_pana.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_github.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_home.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_info.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_johnson_and_johnson.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_medicine_bro.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_photo.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_photo_2021_08_21_16_18_30.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_search.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_sinopharm.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_spalsh_doctor.xml" value="0.14635416666666667" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_splash.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_splash_doctor.xml" value="0.14635416666666667" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_splash_screen_image.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_splash_screen_vector.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_syringe.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_vector_apple.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_virus_splash.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/moderna_ic.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/navigation_shape.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/read_more_shape.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/rec_white_shape.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/search_shape.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/social_media_shape.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/splash_screen.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/view_shape.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/layout/activity_home.xml" value="0.264" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/layout/fragment_details.xml" value="0.25416666666666665" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/layout/fragment_home.xml" value="0.536" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/layout/fragment_info.xml" value="0.264" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/layout/fragment_search.xml" value="0.24010416666666667" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/layout/fragment_second.xml" value="0.25416666666666665" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/menu/navigation_menu.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>
@@ -32,5 +59,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.536" />
+      </ProjectState>
+    </option>
   </component>
 </project>
