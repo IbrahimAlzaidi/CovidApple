@@ -19,7 +19,7 @@ class HomeFragment:BaseFragment<FragmentHomeBinding>() {
 
     override fun addCallBack() {
         binding?.reedMeButton?.setOnClickListener {
-
+            learnMore()
         }
     }
 
@@ -34,7 +34,6 @@ class HomeFragment:BaseFragment<FragmentHomeBinding>() {
         binding?.confirmedNumber?.text = Data.CONFIRMED.v
         binding?.deathsNumber?.text = Data.DEATHS.v
         binding?.recoverNumber?.text = Data.RECOVER.v
-        learnMore()
 
     }
     fun getTopCountryNumber(){
