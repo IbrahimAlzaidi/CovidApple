@@ -3,7 +3,7 @@
 
     <style name="expanded_card_style">
         <item name="android:background">@drawable/prevention</item>
-        <item name="android:paddingHorizontall">12dp</item>
+        <item name="android:paddingHorizontal">12dp</item>
         <item name="android:paddingTop">12dp</item>
         <item name="android:paddingBottom">24dp</item>
         <item name="android:maxLines">3</item>
