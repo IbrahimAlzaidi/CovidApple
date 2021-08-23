@@ -9,16 +9,16 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/text_daily_vaccination"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Countries Daily Vaccinations"
+            android:text="@string/countries_daily_vaccinations"
             android:layout_marginTop="32dp"
             android:layout_marginStart="8dp"
-            android:textSize="20sp"
+            android:textSize="@dimen/vacc_size"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
