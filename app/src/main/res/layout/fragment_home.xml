@@ -3,9 +3,39 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/green_dark"
-    >
+    android:background="@color/green_dark">
 
+<!--    <ImageView-->
+<!--        android:id="@+id/hero_image_background"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:scaleType="fitStart"-->
+<!--        android:src="@drawable/ic_hero"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:text="@string/covid_app"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/x2_big_margin"
+        android:layout_marginStart="@dimen/small_margin"
+        android:textSize="@dimen/small_than_normal_text_size"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="fitEnd"
+        android:src="@drawable/hero_image"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
@@ -23,7 +53,7 @@
             android:layout_marginTop="@dimen/normal_padding"
             android:background="@color/black"
             app:cardCornerRadius="@dimen/small_card_radius"
-            app:cardElevation="@dimen/small_elevation"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -31,12 +61,14 @@
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/ic_doctor_pana" />
+                android:src="@drawable/ic_doctor" />
 
             <TextView
-                android:layout_width="150dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/super_margin"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
                 android:text="@string/see_more"
                 android:textColor="@color/black"
                 android:textSize="@dimen/small_text_size" />
@@ -45,10 +77,13 @@
                 android:id="@+id/reed_me_button"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
+                android:onClick="addCallBack"
+                android:elevation="24dp"
                 android:layout_marginStart="@dimen/super_margin"
                 android:layout_marginTop="@dimen/x2_big_margin"
                 android:background="@drawable/rec_green_shape"
                 android:text="@string/learn_more"
+                android:textColor="@color/white"
                 android:textSize="12sp" />
         </androidx.cardview.widget.CardView>
 
@@ -89,17 +124,17 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:text="@string/confirmed"
-                    android:textColor="@color/black"
+                    android:textColor="@color/green_dark"
                     android:textSize="@dimen/small_text_size"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/confirmedNumber_textnember"
+                    android:id="@+id/confirmed_number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/num_of_confirmed"
+                    android:text="@string/zero"
                     android:textColor="@color/blue"
-                    android:textSize="@dimen/normal_text_size" />
+                    android:textSize="@dimen/small_than_normal_text_size" />
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.cardview.widget.CardView>
 
@@ -127,7 +162,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:text="@string/recover"
-                    android:textColor="@color/black"
+                    android:textColor="@color/green_dark"
                     android:textSize="@dimen/small_text_size"
                     android:textStyle="bold" />
 
@@ -136,9 +171,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/num_of_recover"
+                    android:text="@string/zero"
                     android:textColor="@color/green"
-                    android:textSize="@dimen/normal_text_size" />
+                    android:textSize="@dimen/small_than_normal_text_size" />
             </androidx.appcompat.widget.LinearLayoutCompat>
 
         </androidx.cardview.widget.CardView>
@@ -166,7 +201,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/deaths"
-                    android:textColor="@color/black"
+                    android:textColor="@color/green_dark"
                     android:textSize="@dimen/small_text_size"
                     android:textStyle="bold" />
 
@@ -175,9 +210,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/num_of_deaths"
+                    android:text="@string/zero"
                     android:textColor="@color/red"
-                    android:textSize="@dimen/normal_text_size" />
+                    android:textSize="@dimen/small_than_normal_text_size" />
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.cardview.widget.CardView>
 
@@ -223,7 +258,8 @@
             android:layout_marginTop="@dimen/small_margin"
             app:layout_constraintEnd_toEndOf="@+id/last_update_text"
             app:layout_constraintStart_toStartOf="@+id/last_update_text"
-            app:layout_constraintTop_toBottomOf="@+id/top_countries">
+            app:layout_constraintTop_toBottomOf="@+id/top_countries"
+            android:scrollbars="none">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -251,26 +287,28 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:text="USA"
+                            android:text="@string/france"
                             android:textColor="@color/white"
                             android:textSize="@dimen/small_text_size"
                             android:textStyle="bold" />
 
                         <ImageView
+                            android:layout_marginTop="@dimen/small_margin"
                             android:id="@+id/first_country_flag"
-                            android:layout_width="60dp"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/ic_doctor_pana"
+                            android:layout_width="48dp"
+                            android:layout_gravity="center"
+                            android:layout_height="32dp"
+                            android:background="@drawable/ic_french_flag"
                             android:textColor="@color/teal_200"
                             />
 
                         <TextView
                             android:id="@+id/first_country_number"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="20dp"
                             android:gravity="center_horizontal"
-                            android:text="1.4M"
-                            android:layout_marginTop="@dimen/small_margin"
+                            android:text="@string/zero"
+                            android:elevation="@dimen/small_elevation"
                             android:textColor="@color/white"
                             android:textSize="@dimen/small_text_size"
                             android:textStyle="bold" />
@@ -298,24 +336,25 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:text="USA"
+                            android:text="@string/italy"
                             android:textColor="@color/white"
                             android:textSize="@dimen/small_text_size"
                             android:textStyle="bold" />
 
                         <ImageView
                             android:id="@+id/second_country_flag"
-                            android:layout_width="60dp"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/ic_doctor_pana" />
+                            android:layout_width="48dp"
+                            android:layout_marginTop="@dimen/small_margin"
+                            android:layout_gravity="center"
+                            android:layout_height="32dp"
+                            android:background="@drawable/ic_italy" />
 
                         <TextView
                             android:id="@+id/second_country_number"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:text="1.4M"
-                            android:layout_marginTop="@dimen/small_text_size"
+                            android:text="@string/zero"
                             android:textColor="@color/white"
                             android:textSize="@dimen/small_text_size"
                             android:textStyle="bold" />
@@ -343,24 +382,24 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:text="USA"
+                            android:text="@string/turkey"
                             android:textColor="@color/white"
                             android:textSize="@dimen/small_text_size"
                             android:textStyle="bold" />
 
                         <ImageView
                             android:id="@+id/third_country_flag"
-                            android:layout_width="60dp"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/ic_doctor_pana"
+                            android:layout_width="48dp"
+                            android:layout_marginTop="@dimen/small_margin"
+                            android:layout_height="32dp"
+                            android:background="@drawable/ic_eer_flag_of_turkey"
                           />
                         <TextView
                             android:id="@+id/third_country_number"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:text="1.4M"
-                            android:layout_marginTop="@dimen/small_margin"
+                            android:text="@string/zero"
                             android:textColor="@color/white"
                             android:textSize="@dimen/small_text_size"
                             android:textStyle="bold" />
@@ -388,16 +427,17 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:text="USA"
+                            android:text="@string/russia"
                             android:textColor="@color/white"
                             android:textSize="@dimen/small_text_size"
                             android:textStyle="bold" />
 
                         <ImageView
                             android:id="@+id/fourth_country_flag"
-                            android:layout_width="60dp"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/ic_doctor_pana"
+                            android:layout_width="48dp"
+                            android:layout_marginTop="@dimen/small_margin"
+                            android:layout_height="32dp"
+                            android:background="@drawable/ic_flag_of_russia_2016081417"
                          />
 
                         <TextView
@@ -405,8 +445,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:text="1.4M"
-                            android:layout_marginTop="@dimen/small_margin"
+                            android:text="@string/zero"
                             android:textColor="@color/white"
                             android:textSize="@dimen/small_text_size"
                             android:textStyle="bold" />
@@ -433,24 +472,24 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:text="USA"
+                            android:text="@string/india"
                             android:textColor="@color/white"
                             android:textSize="@dimen/small_text_size"
                             android:textStyle="bold" />
 
                         <ImageView
                             android:id="@+id/fifth_country_flag"
-                            android:layout_width="60dp"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/ic_doctor_pana" />
+                            android:layout_width="48dp"
+                            android:layout_marginTop="@dimen/small_margin"
+                            android:layout_height="32dp"
+                            android:background="@drawable/ic_flag_of_india" />
 
                         <TextView
                             android:id="@+id/fifth_country_number"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:text="1.4M"
-                            android:layout_marginTop="@dimen/small_margin"
+                            android:text="@string/zero"
                             android:textColor="@color/white"
                             android:textSize="@dimen/small_text_size"
                             android:textStyle="bold" />
