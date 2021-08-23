@@ -1,4 +1,4 @@
-package com.example.covidapple.util
+package com.example.covidapple.data.domain
 
 enum class TopCountries(val s: String) {
     FRANCE("33.3M"),

@@ -2,6 +2,7 @@ package com.example.covidapple.ui.fragments
 
 import android.graphics.Color
 import android.view.LayoutInflater
+import android.view.View
 import android.widget.SearchView
 import com.example.covidapple.data.DataManger
 
@@ -15,7 +16,7 @@ class SearchFragment:BaseFragment<FragmentSearchBinding>() {
         get() = FragmentSearchBinding::inflate
 
     override fun setup() {
-
+        binding?.pieChart?.visibility = View.INVISIBLE
     }
 
     override fun addCallBack() {
@@ -32,6 +33,7 @@ class SearchFragment:BaseFragment<FragmentSearchBinding>() {
 
     private fun search(country: String): Boolean {
         binding?.apply {
+            binding?.pieChart?.visibility = View.VISIBLE
              DataManger.getVaccinationMapOfCountry(country).forEach { (t, u) ->
                 binding?.pieChart?.addPieSlice(u?.toFloat()?.let {
                     PieModel(t,
