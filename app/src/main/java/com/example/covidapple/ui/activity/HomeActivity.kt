@@ -2,6 +2,8 @@ package com.example.covidapple.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import androidx.core.view.get
 import androidx.fragment.app.Fragment
 import com.example.covidapple.R
 import com.example.covidapple.data.DataManger
@@ -29,21 +31,25 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         //set the style back to normal after activating splash screen
         setTheme(R.style.Theme_CovidApple)
-
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
         openFile()
         addNavigationListener()
+        binding.navigationBar.background = null
+        addFabAction()
     }
-
+    private fun addFabAction(){
+        binding.fab.setOnClickListener(View.OnClickListener {
+            replaceFragment(fragemntSearch)
+        })
+    }
     private fun addNavigationListener() {
         binding.navigationBar.setOnItemSelectedListener { item ->
             replaceFragment(
                 when(item.itemId){
-                    R.id.nav_home -> fragmentHome
-                    R.id.nav_info -> fragmentInfo
-                    R.id.nav_search -> fragemntSearch
-                    R.id.nav_details -> fragmentDetails
+                    binding.navigationBar.menu.getItem(0).itemId -> fragmentHome
+                    binding.navigationBar.menu.getItem(1).itemId -> fragmentDetails
+                    binding.navigationBar.menu.getItem(3).itemId  -> fragmentInfo
                     else -> return@setOnItemSelectedListener  false
                 }
             )
@@ -53,7 +59,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun replaceFragment(newFragment: Fragment){
         val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(binding.container.id, newFragment)
+        transaction.replace(binding.containerView.id, newFragment)
         transaction.commit()
     }
 
