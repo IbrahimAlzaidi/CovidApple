@@ -19,9 +19,9 @@ object DataManger {
         it.country?.equals(country, ignoreCase = true) == true
     }.sumOf { it.peopleFullyVaccinated ?: 0}
 
-//    fun getTotalVaccinationForAllCountries() = vaccineList.groupBy {
-//        it.country
-//    }.keys.associateWith { getTotalDailyVaccinationForCountry(it) }
+    fun getTotalVaccinationForAllCountries() = vaccineList.groupBy {
+        it.country
+    }.keys.associateWith { getTotalDailyVaccinationForCountry(it) }
 
     fun getTotalVaccinatedForAllCountries() = vaccineList.groupBy {
         it.country
