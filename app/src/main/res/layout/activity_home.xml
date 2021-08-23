@@ -14,8 +14,8 @@
         android:layout_height="wrap_content"
         app:fabCradleMargin="10dp"
         app:fabCradleVerticalOffset="10dp"
+        android:backgroundTint="#A6D5FA"
         app:fabCradleRoundedCornerRadius="20dp"
-        android:backgroundTint="#236C76"
         android:layout_gravity="bottom">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -24,8 +24,9 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:paddingHorizontal="0dp"
-
             android:background="@android:color/transparent"
+            app:itemIconTint="#607D8B"
+            app:itemTextColor="#607D8B"
             app:menu="@menu/bottom_nav_menu" />
 
     </com.google.android.material.bottomappbar.BottomAppBar>
