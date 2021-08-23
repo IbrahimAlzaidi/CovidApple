@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.widget.TextView
 import com.example.covidapple.databinding.FragmentHomeBinding
 import com.example.covidapple.util.Data
+import com.example.covidapple.util.TopCountries
 
 class HomeFragment:BaseFragment<FragmentHomeBinding>() {
     override val LOG_TAG: String = "Home Fragment"
@@ -13,11 +14,12 @@ class HomeFragment:BaseFragment<FragmentHomeBinding>() {
         get() = FragmentHomeBinding::inflate
     override fun setup() {
         getData()
+        getTopCountryNumber()
     }
 
     override fun addCallBack() {
         binding?.reedMeButton?.setOnClickListener {
-            learnMore()
+
         }
     }
 
@@ -29,8 +31,18 @@ class HomeFragment:BaseFragment<FragmentHomeBinding>() {
     }
 
     fun getData(){
-        binding?.confirmedNumberTextnember?.setText(Data.CONFIRMED.v)
-        binding?.deathsNumber?.setText(Data.DEATHS.v)
-        binding?.recoverNumber?.setText(Data.RECOVER.v)
+        binding?.confirmedNumber?.text = Data.CONFIRMED.v
+        binding?.deathsNumber?.text = Data.DEATHS.v
+        binding?.recoverNumber?.text = Data.RECOVER.v
+        learnMore()
+
+    }
+    fun getTopCountryNumber(){
+        binding?.firstCountryNumber?.text = TopCountries.FRANCE.s
+        binding?.secondCountryNumber?.text = TopCountries.ITALY.s
+        binding?.thirdCountryNumber?.text = TopCountries.TURKEY.s
+        binding?.fourthCountryNumber?.text = TopCountries.RUSSIA.s
+        binding?.fifthCountryNumber?.text = TopCountries.INDIA.s
+
     }
 }

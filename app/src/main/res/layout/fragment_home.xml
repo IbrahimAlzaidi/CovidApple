@@ -1,31 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/green_dark">
 
-    <ImageView
-        android:id="@+id/hero_image_background"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:scaleType="fitStart"
-        android:src="@drawable/ic_heroooo"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<!--    <ImageView-->
+<!--        android:id="@+id/hero_image_background"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:scaleType="fitStart"-->
+<!--        android:src="@drawable/ic_hero"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="100dp"
-        android:text="Covid App\n By team green apple"
+        android:text="@string/covid_app"
         android:textColor="@color/white"
         android:layout_marginTop="@dimen/x2_big_margin"
         android:layout_marginStart="@dimen/small_margin"
         android:textSize="@dimen/small_than_normal_text_size"
-        app:layout_constraintBottom_toBottomOf="@+id/hero_image_background"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,10 +33,9 @@
         android:layout_height="0dp"
         android:scaleType="fitEnd"
         android:src="@drawable/hero_image"
-        app:layout_constraintBottom_toBottomOf="@+id/hero_image_background"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/hero_image_background" />
+        app:layout_constraintStart_toStartOf="parent" />
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
@@ -63,7 +61,7 @@
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/ic_doctor_pana" />
+                android:src="@drawable/ic_doctor" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -131,10 +129,10 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/confirmedNumber_textnember"
+                    android:id="@+id/confirmed_number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/num_of_confirmed"
+                    android:text="@string/zero"
                     android:textColor="@color/blue"
                     android:textSize="@dimen/small_than_normal_text_size" />
             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -173,7 +171,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/num_of_recover"
+                    android:text="@string/zero"
                     android:textColor="@color/green"
                     android:textSize="@dimen/small_than_normal_text_size" />
             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -212,7 +210,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/num_of_deaths"
+                    android:text="@string/zero"
                     android:textColor="@color/red"
                     android:textSize="@dimen/small_than_normal_text_size" />
             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -289,7 +287,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:text="France"
+                            android:text="@string/france"
                             android:textColor="@color/white"
                             android:textSize="@dimen/small_text_size"
                             android:textStyle="bold" />
@@ -300,7 +298,7 @@
                             android:layout_width="48dp"
                             android:layout_gravity="center"
                             android:layout_height="32dp"
-                            android:background="@drawable/ic_frenchflagframed"
+                            android:background="@drawable/ic_french_flag"
                             android:textColor="@color/teal_200"
                             />
 
@@ -309,7 +307,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="20dp"
                             android:gravity="center_horizontal"
-                            android:text="1.4M"
+                            android:text="@string/zero"
                             android:elevation="@dimen/small_elevation"
                             android:textColor="@color/white"
                             android:textSize="@dimen/small_text_size"
@@ -338,7 +336,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:text="Italy"
+                            android:text="@string/italy"
                             android:textColor="@color/white"
                             android:textSize="@dimen/small_text_size"
                             android:textStyle="bold" />
@@ -349,14 +347,14 @@
                             android:layout_marginTop="@dimen/small_margin"
                             android:layout_gravity="center"
                             android:layout_height="32dp"
-                            android:background="@drawable/ic__italy__lauris_kaplinski_01" />
+                            android:background="@drawable/ic_italy" />
 
                         <TextView
                             android:id="@+id/second_country_number"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:text="1.4M"
+                            android:text="@string/zero"
                             android:textColor="@color/white"
                             android:textSize="@dimen/small_text_size"
                             android:textStyle="bold" />
@@ -384,7 +382,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:text="Turkey "
+                            android:text="@string/turkey"
                             android:textColor="@color/white"
                             android:textSize="@dimen/small_text_size"
                             android:textStyle="bold" />
@@ -401,7 +399,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:text="1.4M"
+                            android:text="@string/zero"
                             android:textColor="@color/white"
                             android:textSize="@dimen/small_text_size"
                             android:textStyle="bold" />
@@ -429,7 +427,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:text="Russia"
+                            android:text="@string/russia"
                             android:textColor="@color/white"
                             android:textSize="@dimen/small_text_size"
                             android:textStyle="bold" />
@@ -447,7 +445,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:text="1.4M"
+                            android:text="@string/zero"
                             android:textColor="@color/white"
                             android:textSize="@dimen/small_text_size"
                             android:textStyle="bold" />
@@ -474,7 +472,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:text="India "
+                            android:text="@string/india"
                             android:textColor="@color/white"
                             android:textSize="@dimen/small_text_size"
                             android:textStyle="bold" />
@@ -491,7 +489,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:text="1.4M"
+                            android:text="@string/zero"
                             android:textColor="@color/white"
                             android:textSize="@dimen/small_text_size"
                             android:textStyle="bold" />

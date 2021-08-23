@@ -11,11 +11,14 @@
     <string name="info">Info</string>
     <string name="see_more" translatable="false">Learn more about COVID_19 \n #StayHome</string>
     <string name="learn_more">learn more</string>
-    <string name="num_of_confirmed">0</string>
-    <string name="num_of_deaths">0</string>
     <string name="top_countries">Top countries</string>
-    <string name="num_of_recover">0</string>
-
+    <string name="covid_app">Covid App\n By team green apple</string>
+    <string name="france">France</string>
+    <string name="italy">Italy</string>
+    <string name="turkey">Turkey</string>
+    <string name="russia">Russia</string>
+    <string name="india">India</string>
+    <string name="zero">0</string>
 
 
 </resources>
