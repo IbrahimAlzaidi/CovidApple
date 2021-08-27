@@ -30,11 +30,11 @@ class InfoFragment:BaseFragment<FragmentInfoBinding>() {
             gitHubAccount(url)
         }
         binding?.buttonGithubBasheer?.setOnClickListener {
-            url = "https://github.com/basheer574"
+            url = "https://github.com/MoeZalzala"
             gitHubAccount(url)
         }
         binding?.buttonGithubHuda?.setOnClickListener {
-            url = "https://github.com/huda997"
+            url = "https://github.com/asawerdawood"
             gitHubAccount(url)
         }
     }
