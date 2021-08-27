@@ -5,6 +5,10 @@ import com.example.covidapple.data.domain.Vaccine
 object DataManger {
 
     private val vaccineList = mutableListOf<Vaccine>()
+    val vaccine:List<Vaccine>
+        get()= vaccineList
+
+
 
     /**
      * This function fill the list of Vaccine
