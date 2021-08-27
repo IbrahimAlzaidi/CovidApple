@@ -3,7 +3,7 @@
     <item android:drawable="@color/white"/>
     <item
         android:gravity="center"
-        android:drawable="@drawable/ic_splash"/>
+        android:drawable="@drawable/ic_splash_doctor"/>
 
 
 </layer-list>

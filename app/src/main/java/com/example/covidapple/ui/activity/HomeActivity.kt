@@ -6,9 +6,7 @@ import androidx.fragment.app.Fragment
 import com.example.covidapple.R
 import com.example.covidapple.data.DataManger
 import com.example.covidapple.databinding.ActivityHomeBinding
-import com.example.covidapple.ui.fragments.HomeFragment
-import com.example.covidapple.ui.fragments.InfoFragment
-import com.example.covidapple.ui.fragments.SearchFragment
+import com.example.covidapple.ui.fragments.*
 import com.example.covidapple.util.CsvParser
 import com.example.covidapple.util.log
 import java.io.BufferedReader
@@ -21,6 +19,8 @@ class HomeActivity : AppCompatActivity() {
     private val fragmentHome = HomeFragment()
     private val fragemntSearch = SearchFragment()
     private val fragmentInfo = InfoFragment()
+    private val fragmentDetails = DetailsFragment()
+    private  val fragmentVaccination = VaccinationFragment()
 
     private lateinit var binding: ActivityHomeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,6 +41,8 @@ class HomeActivity : AppCompatActivity() {
                     R.id.nav_home -> fragmentHome
                     R.id.nav_info -> fragmentInfo
                     R.id.nav_search -> fragemntSearch
+                    R.id.nav_details -> fragmentDetails
+                    R.id.nav_vaccination_daily_info -> fragmentVaccination
                     else -> return@setOnItemSelectedListener  false
                 }
             )
@@ -62,9 +64,10 @@ class HomeActivity : AppCompatActivity() {
             val vaccine = parser.parse(line)
             DataManger.addVaccine(vaccine)
         }
-        DataManger.getVaccinationMapOfCountry("iraq").log()
-        DataManger.getTotalVaccinationForCountry("iraq").log()
-        DataManger.getTotalVaccinationForAllCountries().log()
+        DataManger.getTotalVaccinatedForAllCountries().log()
+//        DataManger.getTotalVaccinationForCountry("iraq").log()
+//        DataManger.getTotalVaccinationForAllCountries().log()
+
     }
 
 

@@ -16,4 +16,12 @@
         android:icon="@drawable/ic_info"
         android:title="@string/info"
         />
+    <item
+        android:id="@+id/nav_details"
+        android:icon="@drawable/ic_syringe"
+        android:title="Details"
+        />
+    <item android:id="@+id/nav_vaccination_daily_info"
+        android:icon="@drawable/ic_list"
+        android:title="vaccination"/>
 </menu>
