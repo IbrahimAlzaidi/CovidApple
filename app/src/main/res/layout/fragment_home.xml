@@ -282,8 +282,7 @@
                     android:id="@+id/first_country_card"
                     android:layout_width="wrap_content"
                     android:layout_height="140dp"
-                    android:background="#efefef"
-                    android:backgroundTint="#efefef"
+                    android:backgroundTint="#236C76"
                     android:layout_marginStart="@dimen/small_margin"
                     app:cardCornerRadius="@dimen/small_card_radius"
                     app:cardElevation="@dimen/small_elevation">
@@ -332,6 +331,7 @@
                      android:id="@+id/second_country_card"
                     android:layout_width="100dp"
                     android:layout_height="140dp"
+                    android:backgroundTint="#236C76"
                     android:layout_marginStart="@dimen/small_margin"
                     app:cardCornerRadius="@dimen/small_card_radius"
                     app:cardElevation="@dimen/small_elevation">
@@ -377,6 +377,7 @@
                     android:id="@+id/third_country_card"
                     android:layout_width="100dp"
                     android:layout_height="140dp"
+                    android:backgroundTint="#236C76"
                     android:layout_marginStart="@dimen/small_margin"
                     android:background="@drawable/rec_green_shape"
                     app:cardCornerRadius="@dimen/small_card_radius"
@@ -422,6 +423,7 @@
                     android:id="@+id/fourth_country_card"
                     android:layout_width="100dp"
                     android:layout_height="140dp"
+                    android:backgroundTint="#236C76"
                     android:layout_marginStart="@dimen/small_margin"
                     android:background="@drawable/rec_green_shape"
                     app:cardCornerRadius="@dimen/small_card_radius"
@@ -468,6 +470,7 @@
                     android:id="@+id/fifth_country_card"
                     android:layout_width="100dp"
                     android:layout_height="140dp"
+                    android:backgroundTint="#236C76"
                     android:layout_marginStart="@dimen/small_margin"
                     app:cardCornerRadius="@dimen/small_card_radius"
                     app:cardElevation="@dimen/small_elevation">
