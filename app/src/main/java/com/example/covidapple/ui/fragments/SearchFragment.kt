@@ -35,7 +35,7 @@ class SearchFragment:BaseFragment<FragmentSearchBinding>() {
         binding?.apply {
             binding?.pieChart?.visibility = View.VISIBLE
              DataManger.getVaccinationMapOfCountry(country).forEach { (t, u) ->
-                binding?.pieChart?.addPieSlice(u?.toFloat()?.let {
+                    binding?.pieChart?.addPieSlice(u?.toFloat()?.let {
                     PieModel(t,
                         it, Color.argb(255, Random.nextInt(50, 200),
                             Random.nextInt(50, 250), Random.nextInt(50, 250)))
