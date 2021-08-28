@@ -279,12 +279,12 @@
                 tools:ignore="ContentDescription" />
 
             <TextView
-                android:id="@+id/text_name_basheer"
+                android:id="@+id/text_name_mohammed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="12dp"
-                android:text="@string/name_basheer"
+                android:text="@string/mohammed_ehsan"
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 app:layout_constraintStart_toEndOf="@+id/ic_image_member_three"
@@ -297,8 +297,8 @@
                 android:text="@string/team_member_description"
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/text_name_basheer"
-                app:layout_constraintTop_toTopOf="@+id/text_name_basheer" />
+                app:layout_constraintStart_toStartOf="@+id/text_name_mohammed"
+                app:layout_constraintTop_toTopOf="@+id/text_name_mohammed" />
 
             <ImageButton
                 android:id="@+id/button_github_basheer"
@@ -343,12 +343,12 @@
                 tools:ignore="ContentDescription" />
 
             <TextView
-                android:id="@+id/text_name_huda"
+                android:id="@+id/text_name_asawer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="12dp"
-                android:text="@string/name_huda"
+                android:text="@string/asawer_dawood"
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 app:layout_constraintStart_toEndOf="@+id/ic_image_member_four"
@@ -361,8 +361,8 @@
                 android:text="@string/team_member_description"
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/text_name_huda"
-                app:layout_constraintTop_toTopOf="@+id/text_name_huda" />
+                app:layout_constraintStart_toStartOf="@+id/text_name_asawer"
+                app:layout_constraintTop_toTopOf="@+id/text_name_asawer" />
 
             <ImageButton
                 android:id="@+id/button_github_huda"
