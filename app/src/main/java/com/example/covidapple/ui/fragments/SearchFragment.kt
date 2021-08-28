@@ -37,11 +37,11 @@ class SearchFragment:BaseFragment<FragmentSearchBinding>() {
              DataManger.getVaccinationMapOfCountry(country).forEach { (t, u) ->
                 binding?.pieChart?.addPieSlice(u?.toFloat()?.let {
                     PieModel(t,
-                        it, Color.argb(255, Random.nextInt(50, 200), Random.nextInt(50, 250), Random.nextInt(50, 250)))
+                        it, Color.argb(255, Random.nextInt(50, 200),
+                            Random.nextInt(50, 250), Random.nextInt(50, 250)))
                 })
             }
             binding?.pieChart?.startAnimation()
-
         }
         return false
     }

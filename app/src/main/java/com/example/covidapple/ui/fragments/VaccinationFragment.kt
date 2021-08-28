@@ -16,7 +16,8 @@ class VaccinationFragment:BaseFragment<FragmentVaccinationBinding>() {
         val listOfCountry = DataManger.getTotalVaccinationForAllCountries().toList()
         for (i in listOfCountry.indices) {
             counter++
-            binding?.textview?.append((counter.toString() + "." + listOfCountry[i].first?.take(20)+"\t\t\t \b"+ listOfCountry[i].second +"\n"))
+            binding?.textview?.append((counter.toString() + "." +
+                    listOfCountry[i].first?.take(20)+"\t\t\t \b"+ listOfCountry[i].second +"\n"))
 
         }
     }
