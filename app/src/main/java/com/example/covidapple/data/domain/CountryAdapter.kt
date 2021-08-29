@@ -5,9 +5,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.covidapple.R
+import com.example.covidapple.data.DataManger
 import com.example.covidapple.databinding.ItemVaccinationBinding
 
-class CountryAdapter(private val list:List<Vaccine>):RecyclerView.Adapter<CountryAdapter.CountryViewHolder>() {
+class CountryAdapter(private val list: List<Pair<String?, Int?>>):RecyclerView.Adapter<CountryAdapter.CountryViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CountryViewHolder {
 
         //provide the necessary items to show
@@ -18,10 +19,12 @@ class CountryAdapter(private val list:List<Vaccine>):RecyclerView.Adapter<Countr
     override fun onBindViewHolder(holder: CountryViewHolder, position: Int) {
         //list that has the current position
         val currentValue = list[position]
-       
+//        val countryFlag = currentValue.first?.zip(DataManger.getListOfCountries().toString())
+//            ?.all { (x, y) -> x == y }.log()
       holder.binding.apply {
-          textCountryName.text = currentValue.country
-          textCountryValue.text = currentValue.dailyVaccinations.toString()
+          textCountryName.text = currentValue.first
+          textCountryValue.text =
+              currentValue.second?.let { DataManger.abbreviateTheNumber(it.toLong()) }
 
       }
     }

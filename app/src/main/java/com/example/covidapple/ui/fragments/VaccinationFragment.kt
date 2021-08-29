@@ -13,7 +13,7 @@ class VaccinationFragment:BaseFragment<FragmentVaccinationBinding>() {
 
 
     override fun setup() {
-        val adapter = CountryAdapter(DataManger.filteredList)
+        val adapter = CountryAdapter(DataManger.getTotalVaccinatedForAllCountry())
         binding?.countryRecycleView?.adapter=adapter
     }
 
