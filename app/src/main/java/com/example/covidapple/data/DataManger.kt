@@ -35,43 +35,35 @@ object DataManger {
 
 
     /**
-     * this function take one parameter and return TotalVaccinatedForCountry
+     * this function take one parameter and return TotalPeopleVaccinatedForCountry
      * @param country
      */
-    fun getTotalVaccinatedForCountry(country: String?):Int? =
-        vaccineList.findLast { it.country.equals(country,ignoreCase = true) }?.peopleFullyVaccinated
-
-    private fun getTotalPeopleVaccinatedForCountry(country: String?) =
+     fun getTotalPeopleVaccinatedForCountry(country: String?) =
         vaccineList.filter {
             it.country?.equals(country, ignoreCase = true) == true
         }.maxOf { it.peopleFullyVaccinated ?: 0 }
 
+    private fun getTotalPeopleVaccinatedForCountryTemp(country: String?) =
+        vaccineList.filter {
+            it.isoCode?.equals(country, ignoreCase = true) == true
+        }.maxOf { it.peopleFullyVaccinated ?: 0 }
 
+    /**
+     * this function take no parameter and return TotalVaccinatedPeopleForAllCountries
+     */
     fun getTotalVaccinatedForAllCountry()=vaccineList.groupBy {
         it.country}.keys.associateWith { getTotalPeopleVaccinatedForCountry(it) }.toList()
-    //region
 
-//   fun getTotalVaccinatedForCountry(country: String?) = vaccineList.filter {
-//        it.country?.equals(country, ignoreCase = true) == true
-//    }.sumOf { it.peopleFullyVaccinated ?: 0}
-    //endregion
-
-
+    fun getTotalVaccinatedForAllCountryTemp()=vaccineList.groupBy {
+        it.isoCode}.keys.associateWith { getTotalPeopleVaccinatedForCountryTemp(it) }.toList()
     /**
      * this function take no parameter and return TotalVaccinationForAllCountries
      * take the top 5.
      */
-    fun getTotalVaccinationForAllCountries() = vaccineList.groupBy {
-        it.country
-    }.keys.associateWith { getTotalVaccinatedForCountry(it) }.toList()
 
-
-    /**
-     * this function take no parameter and return TotalVaccinatedForAllCountries
-     */
     fun getTotalVaccinatedForAllCountries() = vaccineList.groupBy {
         it.country
-    }.keys.associateWith { getTotalVaccinatedForCountry(it) }.toList().sortedBy {
+    }.keys.associateWith { getTotalPeopleVaccinatedForCountry(it) }.toList().sortedBy {
             (_,v) ->
         v?.times(-1)
     }.take(5).toMap()
@@ -120,6 +112,8 @@ object DataManger {
         return countryListWithEmojis
 
     }
+
+//    fun abdc () = vaccineList.filter { it.country.equals(getListOfCountries().) }
 
 
 }

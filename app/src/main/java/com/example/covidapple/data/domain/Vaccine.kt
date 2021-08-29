@@ -1,7 +1,7 @@
 package com.example.covidapple.data.domain
 
 data class Vaccine(
-    val country: String?,
+    var country: String?,
     val isoCode: String?,
     val date: String?,
     val totalVaccinations: Int?,

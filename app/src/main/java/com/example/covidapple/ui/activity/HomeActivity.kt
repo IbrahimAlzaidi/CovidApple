@@ -68,7 +68,8 @@ class HomeActivity : AppCompatActivity() {
 //        DataManger.getTotalVaccinationForCountry("iraq").log()
 //        DataManger.getTotalVaccinationForAllCountries().log()
 //          DataManger.getListOfCountries().log()
-//        DataManger.getTotalVaccinatedForCountryTemp("Afghanistan").log()
+        DataManger.getTotalVaccinatedForAllCountries().log()
+//        DataManger.filteredList.mapNames().log()
     }
 
 }

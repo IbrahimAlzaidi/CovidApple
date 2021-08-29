@@ -19,8 +19,7 @@ class CountryAdapter(private val list: List<Pair<String?, Int?>>):RecyclerView.A
     override fun onBindViewHolder(holder: CountryViewHolder, position: Int) {
         //list that has the current position
         val currentValue = list[position]
-//        val countryFlag = currentValue.first?.zip(DataManger.getListOfCountries().toString())
-//            ?.all { (x, y) -> x == y }.log()
+
       holder.binding.apply {
           textCountryName.text = currentValue.first
           textCountryValue.text =

@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import com.example.covidapple.data.DataManger
 import com.example.covidapple.data.domain.CountryAdapter
 import com.example.covidapple.databinding.FragmentVaccinationBinding
+import com.example.covidapple.util.mapName
 
 class VaccinationFragment:BaseFragment<FragmentVaccinationBinding>() {
     override val LOG_TAG: String = "Vaccination Activity"
@@ -13,7 +14,9 @@ class VaccinationFragment:BaseFragment<FragmentVaccinationBinding>() {
 
 
     override fun setup() {
-        val adapter = CountryAdapter(DataManger.getTotalVaccinatedForAllCountry())
+        val adapter = CountryAdapter(DataManger.getTotalVaccinatedForAllCountryTemp().map {
+            Pair(it.first?.mapName(),it.second)
+        })
         binding?.countryRecycleView?.adapter=adapter
     }
 
