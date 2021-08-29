@@ -4,8 +4,6 @@ import android.content.Intent
 import android.net.Uri
 import android.view.LayoutInflater
 import com.example.covidapple.databinding.FragmentHomeBinding
-import com.example.covidapple.data.domain.Data
-import com.example.covidapple.data.domain.TopCountries
 
 class HomeFragment:BaseFragment<FragmentHomeBinding>() {
     override val LOG_TAG: String = "Home Fragment"
@@ -28,19 +26,24 @@ class HomeFragment:BaseFragment<FragmentHomeBinding>() {
         intent.data = Uri.parse(readMoreArticle)
         startActivity(intent)
     }
-
+    /*
+    * Todo() we need to update this method to display real Data
+    */
     fun getData(){
-        binding?.confirmedNumber?.text = Data.CONFIRMED.v
-        binding?.deathsNumber?.text = Data.DEATHS.v
-        binding?.recoverNumber?.text = Data.RECOVER.v
+        binding?.confirmedNumber?.text = 1.toString()
+        binding?.deathsNumber?.text = 1.toString()
+        binding?.recoverNumber?.text = 1.toString()
 
     }
+    /*
+    * Todo() we need to update this method to display real Data
+    */
     fun getTopCountryNumber(){
-        binding?.firstCountryNumber?.text = TopCountries.FRANCE.s
-        binding?.secondCountryNumber?.text = TopCountries.ITALY.s
-        binding?.thirdCountryNumber?.text = TopCountries.TURKEY.s
-        binding?.fourthCountryNumber?.text = TopCountries.RUSSIA.s
-        binding?.fifthCountryNumber?.text = TopCountries.INDIA.s
+        binding?.firstCountryNumber?.text = 1.toString()
+        binding?.secondCountryNumber?.text = 1.toString()
+        binding?.thirdCountryNumber?.text = 1.toString()
+        binding?.fourthCountryNumber?.text = 1.toString()
+        binding?.fifthCountryNumber?.text = 1.toString()
 
     }
 }
