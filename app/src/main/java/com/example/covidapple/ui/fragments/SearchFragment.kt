@@ -7,6 +7,7 @@ import android.widget.SearchView
 import com.example.covidapple.data.DataManger
 
 import com.example.covidapple.databinding.FragmentSearchBinding
+import org.eazegraph.lib.models.BarModel
 import org.eazegraph.lib.models.PieModel
 import kotlin.random.Random
 
@@ -16,7 +17,7 @@ class SearchFragment:BaseFragment<FragmentSearchBinding>() {
         get() = FragmentSearchBinding::inflate
 
     override fun setup() {
-        binding?.pieChart?.visibility = View.INVISIBLE
+        binding?.barchart?.visibility = View.INVISIBLE
     }
 
     override fun addCallBack() {
@@ -33,15 +34,15 @@ class SearchFragment:BaseFragment<FragmentSearchBinding>() {
 
     private fun search(country: String): Boolean {
         binding?.apply {
-            binding?.pieChart?.visibility = View.VISIBLE
+            binding?.barchart?.visibility = View.VISIBLE
              DataManger.getVaccinationMapOfCountry(country).forEach { (t, u) ->
-                    binding?.pieChart?.addPieSlice(u?.toFloat()?.let {
-                    PieModel(t,
+                    binding?.barchart?.addBar(u?.toFloat()?.let {
+                    BarModel(t,
                         it, Color.argb(255, Random.nextInt(50, 200),
                             Random.nextInt(50, 250), Random.nextInt(50, 250)))
                 })
             }
-            binding?.pieChart?.startAnimation()
+            binding?.barchart?.startAnimation()
         }
         return false
     }
