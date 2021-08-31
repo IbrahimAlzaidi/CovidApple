@@ -1,15 +1,13 @@
 package com.example.covidapple.ui.fragments
 
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.SearchView
 import com.example.covidapple.data.DataManger
 
 import com.example.covidapple.databinding.FragmentSearchBinding
+import com.example.covidapple.util.Helper
 import org.eazegraph.lib.models.BarModel
-import org.eazegraph.lib.models.PieModel
-import kotlin.random.Random
 
 class SearchFragment:BaseFragment<FragmentSearchBinding>() {
     override val LOG_TAG: String = "Search Fragment"
@@ -35,15 +33,17 @@ class SearchFragment:BaseFragment<FragmentSearchBinding>() {
     private fun search(country: String): Boolean {
         binding?.apply {
             binding?.barchart?.visibility = View.VISIBLE
-             DataManger.getVaccinationMapOfCountry(country).forEach { (t, u) ->
-                    binding?.barchart?.addBar(u?.toFloat()?.let {
-                    BarModel(t,
-                        it, Color.argb(255, Random.nextInt(50, 200),
-                            Random.nextInt(50, 250), Random.nextInt(50, 250)))
+             DataManger.getVaccinationMapOfCountry(country).forEach { (k, v) ->
+                    binding?.barchart?.addBar(v?.toFloat()?.let {
+                    BarModel(k,
+                        it, Helper.colorSet()
+                    )
                 })
             }
             binding?.barchart?.startAnimation()
         }
         return false
     }
+
+
 }
