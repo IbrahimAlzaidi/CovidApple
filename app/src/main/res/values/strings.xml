@@ -43,6 +43,10 @@
     <string name="countries_daily_vaccinations">Countries Daily Vaccinations</string>
     <string name="mohammed_ehsan">Mohammed Ehsan</string>
     <string name="asawer_dawood">Asawer Dawood</string>
+    <string name="scrollView_discreption">homeFragment</string>
+    <string name="normal_circle">normal_circle</string>
+    <string name="normal_guy">normal_guy</string>
+    <string name="read_about_covid">Read about Covid-19 :</string>
 
 
 </resources>
