@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/gray"
+    android:background="@color/new_background"
     android:layout_height="match_parent">
 
     <SearchView
@@ -13,6 +13,7 @@
         android:layout_margin="16dp"
         android:elevation="@dimen/cardview_default_elevation"
         android:focusable="auto"
+        android:background="@drawable/rec_white_shape"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -20,34 +21,111 @@
         android:iconifiedByDefault="false"
         android:inputType="text"
         android:queryHint="search country"
-        android:textColor="@color/black"
-        android:textColorHint="@android:color/darker_gray" />
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
 
-
-    <TextView
-        android:id="@+id/textview"
-        android:layout_width="wrap_content"
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView3"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="The Daily Vaccinated People"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/barchart"
+        android:layout_margin="16dp"
+        android:scrollbars="none"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search" />
+        app:layout_constraintTop_toBottomOf="@+id/search">
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clipToPadding="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search"
+            app:singleLine="true">
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/rec_green_shape"
+                android:elevation="8dp"
+                android:text="Total vaccination"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/search" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/rec_green_shape"
+                android:text="People Vaccinated"
+                android:elevation="8dp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/search" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/rec_green_shape"
+                android:maxLength="23"
+                android:elevation="8dp"
+                android:text="People Fully vaccinated"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/search" />
+        </com.google.android.material.chip.ChipGroup>
+
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Data"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView3" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_margin="8dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <HorizontalScrollView
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/view2">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="220dp"
+                android:layout_height="120dp"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </HorizontalScrollView>
+
 
     <org.eazegraph.lib.charts.BarChart
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/barchart"
         android:layout_width="match_parent"
         android:layout_height="256dp"
         android:padding="10dp"
-        app:egFixedBarWidth="true"
         app:egBarWidth="20dp"
+        app:egFixedBarWidth="true"
         app:egLegendHeight="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/search"
-        app:layout_constraintStart_toStartOf="@+id/search"
-        app:layout_constraintTop_toBottomOf="@+id/search" />
+        app:layout_constraintStart_toStartOf="@+id/search" />
 
 
         <!--    <org.eazegraph.lib.charts.PieChart-->
