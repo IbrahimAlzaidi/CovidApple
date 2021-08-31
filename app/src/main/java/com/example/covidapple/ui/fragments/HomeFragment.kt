@@ -15,7 +15,7 @@ class HomeFragment:BaseFragment<FragmentHomeBinding>() {
     }
 
     override fun addCallBack() {
-        binding?.reedMeButton?.setOnClickListener {
+        binding?.articleCard?.setOnClickListener {
             learnMore()
         }
     }
@@ -30,20 +30,20 @@ class HomeFragment:BaseFragment<FragmentHomeBinding>() {
     * Todo() we need to update this method to display real Data
     */
     fun getData(){
-        binding?.confirmedNumber?.text = 1.toString()
-        binding?.deathsNumber?.text = 1.toString()
-        binding?.recoverNumber?.text = 1.toString()
+//        binding?.confirmedNumber?.text = 1.toString()
+//        binding?.deathsNumber?.text = 1.toString()
+//        binding?.recoverNumber?.text = 1.toString()
 
     }
     /*
     * Todo() we need to update this method to display real Data
     */
     fun getTopCountryNumber(){
-        binding?.firstCountryNumber?.text = 1.toString()
-        binding?.secondCountryNumber?.text = 1.toString()
-        binding?.thirdCountryNumber?.text = 1.toString()
-        binding?.fourthCountryNumber?.text = 1.toString()
-        binding?.fifthCountryNumber?.text = 1.toString()
+//        binding?.firstCountryNumber?.text = 1.toString()
+//        binding?.secondCountryNumber?.text = 1.toString()
+//        binding?.thirdCountryNumber?.text = 1.toString()
+//        binding?.fourthCountryNumber?.text = 1.toString()
+//        binding?.fifthCountryNumber?.text = 1.toString()
 
     }
 }
