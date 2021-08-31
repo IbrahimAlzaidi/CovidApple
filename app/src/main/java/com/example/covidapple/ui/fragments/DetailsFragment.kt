@@ -3,11 +3,6 @@ package com.example.covidapple.ui.fragments
 import android.content.Intent
 import android.net.Uri
 import android.view.LayoutInflater
-import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.transition.TransitionManager
 import com.example.covidapple.R
 import com.example.covidapple.data.CovidSymptoms
 import com.example.covidapple.data.domain.CovidAdapter
@@ -22,6 +17,24 @@ class DetailsFragment:BaseFragment<FragmentDetailsBinding>() {
         get() = FragmentDetailsBinding::inflate
 
     override fun setup() {
+        setSymptompsInfo()
+        setPreventionInfo()
+        setVaccieneInfo()
+    }
+
+    private fun setPreventionInfo() {
+        imageId= arrayOf(
+            R.drawable.wash_hands,
+            R.drawable.use_facemask,
+            R.drawable.clean_surfaces,
+            R.drawable.distance,
+        )
+        binding?.symptomsRecycleView?.setHasFixedSize(true)
+        arrayList= arrayListOf<CovidSymptoms>()
+        getPreventionData()
+    }
+
+    private  fun setSymptompsInfo(){
         imageId= arrayOf(
             R.drawable.cough,
             R.drawable.fever,
@@ -30,21 +43,51 @@ class DetailsFragment:BaseFragment<FragmentDetailsBinding>() {
         )
         binding?.symptomsRecycleView?.setHasFixedSize(true)
         arrayList= arrayListOf<CovidSymptoms>()
-        getData()
+       getSymptompsData()
+    }
+    private  fun setVaccieneInfo(){
+        imageId= arrayOf(
+            R.drawable.vacciene_pfizer,
+            R.drawable.vacciene_johnson_and_johnson,
+            R.drawable.vacciene_green_apple,
+            R.drawable.vacciene_sinopharm,
+            R.drawable.vacciene_moderna,
+        )
+        binding?.vaccineRecycleView?.setHasFixedSize(true)
+        arrayList= arrayListOf<CovidSymptoms>()
+        getVaccieneData()
     }
 
-    private fun getData() {
+    private fun getSymptompsData() {
         imageId.forEachIndexed { index, i ->
             val image = CovidSymptoms(imageId[index])
             arrayList.add(image)
         }
         binding?.symptomsRecycleView?.adapter=CovidAdapter(arrayList)
     }
+    private fun getPreventionData() {
+        imageId.forEachIndexed { index, i ->
+            val image = CovidSymptoms(imageId[index])
+            arrayList.add(image)
+        }
+        binding?.preventionRecyclerView?.adapter=CovidAdapter(arrayList)
+    }
+    private fun getVaccieneData() {
+        imageId.forEachIndexed { index, i ->
+            val image = CovidSymptoms(imageId[index])
+            arrayList.add(image)
+        }
+        binding?.vaccineRecycleView?.adapter=CovidAdapter(arrayList)
+    }
 
     override fun addCallBack() {
         binding?.buttonKnowMoreSymptoms!!.setOnClickListener {
-            val url ="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"
-            showArticle(url)
+            val symptomsUrl ="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"
+            showArticle(symptomsUrl)
+        }
+        binding?.buttonKnowMorePrevention!!.setOnClickListener {
+            val preventionUrl = "https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html"
+            showArticle(preventionUrl)
         }
 
     }

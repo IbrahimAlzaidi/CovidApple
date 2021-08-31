@@ -57,13 +57,14 @@
         <entry key="..\:/pleaseGithub/app/src/main/res/drawable/rec_white_shape.xml" value="0.2703125" />
         <entry key="..\:/pleaseGithub/app/src/main/res/drawable/splash_screen.xml" value="0.2703125" />
         <entry key="..\:/pleaseGithub/app/src/main/res/layout/activity_home.xml" value="0.264" />
-        <entry key="..\:/pleaseGithub/app/src/main/res/layout/fragment_details.xml" value="0.4" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/layout/fragment_details.xml" value="0.264" />
         <entry key="..\:/pleaseGithub/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/pleaseGithub/app/src/main/res/layout/fragment_info.xml" value="0.264" />
         <entry key="..\:/pleaseGithub/app/src/main/res/layout/fragment_search.xml" value="0.24010416666666667" />
         <entry key="..\:/pleaseGithub/app/src/main/res/layout/fragment_second.xml" value="0.25416666666666665" />
         <entry key="..\:/pleaseGithub/app/src/main/res/layout/fragment_vaccination.xml" value="0.18432971014492755" />
         <entry key="..\:/pleaseGithub/app/src/main/res/layout/item_covid_info.xml" value="0.25416666666666665" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/layout/item_vaccienes.xml" value="0.25416666666666665" />
         <entry key="..\:/pleaseGithub/app/src/main/res/layout/item_vaccination.xml" value="0.18432971014492755" />
         <entry key="..\:/pleaseGithub/app/src/main/res/menu/main_button_nav.xml" value="0.25416666666666665" />
         <entry key="..\:/pleaseGithub/app/src/main/res/menu/navigation_menu.xml" value="0.25416666666666665" />

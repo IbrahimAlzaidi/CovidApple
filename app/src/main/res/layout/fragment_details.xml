@@ -23,7 +23,7 @@
         android:id="@+id/text_covid_symptoms"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:text="@string/covid_19_symptoms"
         android:textColor="@color/text_color"
         app:layout_constraintEnd_toEndOf="@+id/question_text"
@@ -42,7 +42,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_know_more_symptoms"
         android:layout_width="110dp"
-        android:layout_height="48dp"
+        android:layout_height="32dp"
         android:layout_marginTop="8dp"
         android:textSize="16sp"
         android:text="@string/know_more"
@@ -52,6 +52,60 @@
         app:layout_constraintEnd_toEndOf="@+id/symptoms_recycleView"
         app:layout_constraintStart_toStartOf="@+id/symptoms_recycleView"
         app:layout_constraintTop_toBottomOf="@+id/symptoms_recycleView" />
+
+    <TextView
+        android:id="@+id/text_covid_19_prevention"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/covid_19_prevention"
+        android:textColor="@color/text_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_know_more_symptoms" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/prevention_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/text_covid_19_prevention"
+        tools:layout_editor_absoluteX="12dp"
+        tools:listitem="@layout/item_covid_info" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_know_more_prevention"
+        android:layout_width="110dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/know_more_button"
+        android:onClick="addCallBack"
+        android:text="@string/know_more"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/prevention_recyclerView"
+        app:layout_constraintStart_toStartOf="@+id/prevention_recyclerView"
+        app:layout_constraintTop_toBottomOf="@+id/prevention_recyclerView" />
+
+    <TextView
+        android:id="@+id/text_covid_19_vaccination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/covid_19_vaccination"
+        android:textColor="@color/text_color"
+        app:layout_constraintTop_toBottomOf="@+id/button_know_more_prevention"
+        tools:layout_editor_absoluteX="12dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/vaccine_recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/text_covid_19_vaccination"
+        tools:listitem="@layout/item_covid_info"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

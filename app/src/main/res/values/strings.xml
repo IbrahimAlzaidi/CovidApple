@@ -44,6 +44,8 @@
     <string name="asawer_dawood">Asawer Dawood</string>
     <string name="know_more">Know more</string>
     <string name="covid_19_symptoms">Covid-19 symptoms</string>
+    <string name="covid_19_prevention">Covid-19 prevention</string>
+    <string name="covid_19_vaccination">Covid-19 Vaccination</string>
 
 
 </resources>

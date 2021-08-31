@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.covidapple.R
 import com.example.covidapple.data.DataManger
 import com.example.covidapple.databinding.ItemVaccinationBinding
+import com.google.android.material.imageview.ShapeableImageView
 
 class CountryAdapter(private val list: List<Pair<String?, Int?>>):RecyclerView.Adapter<CountryAdapter.CountryViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CountryViewHolder {
