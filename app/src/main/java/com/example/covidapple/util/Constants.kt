@@ -1,5 +1,8 @@
 package com.example.covidapple.util
 
+import android.graphics.Color
+import kotlin.random.Random
+
 object Constants {
     object ColumnIndex{
         const val COUNTRY =0
@@ -16,4 +19,5 @@ object Constants {
         const val DAILY_VACCINATIONS_PER_MILLION=11
 
     }
+
 }
