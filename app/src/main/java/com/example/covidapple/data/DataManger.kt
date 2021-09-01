@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import com.example.covidapple.data.domain.Vaccine
 import java.util.*
 import kotlin.collections.ArrayList
+import kotlin.math.absoluteValue
 import kotlin.math.ln
 import kotlin.math.pow
 
@@ -38,24 +39,14 @@ object DataManger {
      * this function take one parameter and return TotalPeopleVaccinatedForCountry
      * @param country
      */
-     fun getTotalPeopleVaccinatedForCountry(country: String?) =
+    private fun getTotalPeopleVaccinatedForCountry(country: String?) =
         vaccineList.filter {
             it.country?.equals(country, ignoreCase = true) == true
         }.maxOf { it.peopleFullyVaccinated ?: 0 }
 
-    private fun getTotalPeopleVaccinatedForCountryTemp(country: String?) =
-        vaccineList.filter {
-            it.country?.equals(country, ignoreCase = true) == true
-        }.maxOf { it.peopleFullyVaccinated ?: 0 }
 
-    /**
-     * this function take no parameter and return TotalVaccinatedPeopleForAllCountries
-     */
     fun getTotalVaccinatedForAllCountry()=vaccineList.groupBy {
-        it.country}.keys.associateWith { getTotalPeopleVaccinatedForCountry(it) }.toList()
-
-    fun getTotalVaccinatedForAllCountryTemp()=vaccineList.groupBy {
-        it.country}.keys.associateWith { getTotalPeopleVaccinatedForCountryTemp(it) }.toList()
+        it.country}.keys.associateWith { getTotalPeopleVaccinatedForCountry(it) }.toList().sortedByDescending { (_,v) -> v }
     /**
      * this function take no parameter and return TotalVaccinationForAllCountries
      * take the top 5.
@@ -77,7 +68,16 @@ object DataManger {
         it.country?.equals(country, ignoreCase = true) == true
     }.associate {
         Pair(it.date, it.dailyVaccinations)
-    }.toList().sortedBy { (_,v) -> v }.toMap()
+    }.toList().sortedBy { (k,_) -> k }.toMap()
 
+
+
+    private fun getTotalVaccinationForCountry(country: String?) =
+        vaccineList.filter {
+            it.country?.equals(country, ignoreCase = true) == true
+        }.maxOf { it.totalVaccinations ?: 0 }
+
+//    fun getTotalVaccinationForAllCountries() = vaccineList.groupBy {
+//        it.country}.keys.associateWith { getTotalVaccinationForCountry(it) }.map { it.value }.sumOf { }
 
 }

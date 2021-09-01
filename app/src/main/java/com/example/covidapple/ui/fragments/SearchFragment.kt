@@ -28,6 +28,15 @@ class SearchFragment:BaseFragment<FragmentSearchBinding>() {
             })
             search.queryHint = "Looking for Country, Type it's Name"
         }
+
+        binding?.totalVaccinationChip?.setOnClickListener {
+//            binding?.totalVaccinationCardData?.text = Helper.abbreviateTheNumber(DataManger.getTotalVaccinationForAllCountries())
+        }
+        binding?.peopleVaccinatedChip?.setOnClickListener {
+        }
+        binding?.peopleFullyVaccinatedChip?.setOnClickListener {
+        }
+
     }
 
     private fun search(country: String): Boolean {

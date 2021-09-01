@@ -40,7 +40,7 @@
     <string name="team_member_description">Team Member of Apple team</string>
     <string name="name_rafal">Rafal A</string>
     <string name="credits">Credits</string>
-    <string name="countries_daily_vaccinations">Countries Daily Vaccinations</string>
+    <string name="people_Fully_Vaccinated">People Fully Vaccinated</string>
     <string name="mohammed_ehsan">Mohammed Ehsan</string>
     <string name="asawer_dawood">Asawer Dawood</string>
     <string name="scrollView_discreption">homeFragment</string>
@@ -60,13 +60,13 @@
     <string name="data">Data</string>
     <string name="total_vaccination_card">Total Vaccination</string>
     <string name="example_daa">888</string>
+    <string name="know_more">Know more</string>
+    <string name="covid_19_symptoms">Covid-19 symptoms</string>
+    <string name="covid_19_prevention">Covid-19 prevention</string>
+    <string name="covid_19_vaccination">Covid-19 Vaccination</string>
     <string name="people_vaccinated_card_title">People vaccinated</string>
     <string name="people_fully_vaccinated_card_title">People fully vaccinated</string>
     <string name="country_daily_vaccinations">Country daily vaccinations :</string>
-    <string name="know_more">know more</string>
-    <string name="covid_19_symptoms">Covid-19 symptoms</string>
-    <string name="covid_19_prevention">Covid-19 prevention</string>
-    <string name="covid_19_vaccination">Covid-19 vaccination</string>
 
 
 </resources>
