@@ -26,7 +26,7 @@ class DetailsFragment:BaseFragment<FragmentDetailsBinding>() {
         imageId= arrayOf(
             R.drawable.ic_wash_hands,
             R.drawable.ic_wear_face_mask,
-            R.drawable.ic_clean_surfaces,
+            R.drawable.ic_clean_surface,
             R.drawable.ic_distance,
         )
         binding?.symptomsRecycleView?.setHasFixedSize(true)

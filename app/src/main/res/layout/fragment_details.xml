@@ -36,7 +36,6 @@
         android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintTop_toBottomOf="@+id/text_covid_symptoms"
-        tools:layout_editor_absoluteX="12dp"
         tools:listitem="@layout/item_covid_info" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -46,7 +45,7 @@
         android:layout_marginTop="8dp"
         android:textSize="16sp"
         android:text="@string/know_more"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:onClick="addCallBack"
         android:background="@drawable/know_more_button"
         app:layout_constraintEnd_toEndOf="@+id/symptoms_recycleView"
@@ -81,7 +80,7 @@
         android:background="@drawable/know_more_button"
         android:onClick="addCallBack"
         android:text="@string/know_more"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/prevention_recyclerView"
         app:layout_constraintStart_toStartOf="@+id/prevention_recyclerView"

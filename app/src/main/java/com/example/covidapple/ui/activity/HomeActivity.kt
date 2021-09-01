@@ -64,7 +64,7 @@ class HomeActivity : AppCompatActivity() {
             val vaccine = parser.parse(line)
             DataManger.addVaccine(vaccine)
         }
-        DataManger.getTotalVaccinationForAllCountries().log()
+        //DataManger.getTotalVaccinationForAllCountries().log()
     }
 
 }
