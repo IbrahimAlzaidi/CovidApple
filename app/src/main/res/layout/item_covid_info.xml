@@ -3,9 +3,11 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
     android:layout_margin="8dp"
     android:elevation="8dp"
     app:cardCornerRadius="8dp"
+    android:backgroundTint="#c4a3d7"
     android:layout_marginVertical="8dp">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -16,7 +18,7 @@
             android:id="@+id/image_symptomps"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            app:shapeAppearanceOverlay="@drawable/search_shape"
+            tool:src="@drawable/ic_prevention_clean_surface"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

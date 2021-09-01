@@ -18,10 +18,6 @@ class CovidAdapter(private val symptomsList: ArrayList<CovidSymptoms>): Recycler
         return CovidViewHolder(view)
     }
 
-    override fun getItemViewType(position: Int): Int {
-        return super.getItemViewType(position)
-    }
-
     override fun onBindViewHolder(holder: BaseViewHolder, position: Int) {
         val symList = symptomsList[position]
         when(holder){

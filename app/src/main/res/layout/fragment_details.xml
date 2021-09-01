@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_dark"
+    android:background="@color/white"
     android:padding="@dimen/small_padding"
     >
     <TextView
@@ -13,7 +13,7 @@
     android:layout_height="wrap_content"
     android:gravity="center"
     android:text="@string/question_text"
-    android:textColor="@color/text_color"
+    android:textColor="@color/black"
     android:textSize="@dimen/big_text_size"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/covid_19_symptoms"
-        android:textColor="@color/text_color"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/question_text"
         app:layout_constraintTop_toBottomOf="@+id/question_text" />
 
@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/covid_19_prevention"
-        android:textColor="@color/text_color"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_know_more_symptoms" />
 
@@ -93,7 +93,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/covid_19_vaccination"
-        android:textColor="@color/text_color"
+        android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@+id/button_know_more_prevention"
         tools:layout_editor_absoluteX="12dp" />
 

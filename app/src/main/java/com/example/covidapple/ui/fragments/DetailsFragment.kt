@@ -24,10 +24,10 @@ class DetailsFragment:BaseFragment<FragmentDetailsBinding>() {
 
     private fun setPreventionInfo() {
         imageId= arrayOf(
-            R.drawable.wash_hands,
-            R.drawable.use_facemask,
-            R.drawable.clean_surfaces,
-            R.drawable.distance,
+            R.drawable.ic_wash_hands,
+            R.drawable.ic_wear_face_mask,
+            R.drawable.ic_clean_surfaces,
+            R.drawable.ic_distance,
         )
         binding?.symptomsRecycleView?.setHasFixedSize(true)
         arrayList= arrayListOf<CovidSymptoms>()
@@ -36,10 +36,10 @@ class DetailsFragment:BaseFragment<FragmentDetailsBinding>() {
 
     private  fun setSymptompsInfo(){
         imageId= arrayOf(
-            R.drawable.cough,
-            R.drawable.fever,
-            R.drawable.headache,
-            R.drawable.muscle_pain
+            R.drawable.ic_cough,
+            R.drawable.ic_fever,
+            R.drawable.ic_headache,
+            R.drawable.ic_muscle_pain
         )
         binding?.symptomsRecycleView?.setHasFixedSize(true)
         arrayList= arrayListOf<CovidSymptoms>()
