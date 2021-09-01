@@ -45,31 +45,34 @@
             <com.google.android.material.chip.Chip
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
+                android:id="@+id/total_vaccination_chip"
                 android:background="@drawable/rec_green_shape"
                 android:elevation="8dp"
                 android:text="@string/total_vaccination"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintTop_toBottomOf="@+id/search" />
 
             <com.google.android.material.chip.Chip
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
+                android:id="@+id/people_vaccinated_chip"
                 android:background="@drawable/rec_green_shape"
                 android:text="@string/people_vaccinated"
                 android:elevation="8dp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintTop_toBottomOf="@+id/search" />
 
             <com.google.android.material.chip.Chip
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
+                android:id="@+id/people_fully_vaccinated_chip"
                 android:background="@drawable/rec_green_shape"
                 android:elevation="8dp"
                 android:maxLength="23"
                 android:text="@string/people_fully_vaccinated"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintTop_toBottomOf="@+id/search" />
         </com.google.android.material.chip.ChipGroup>

@@ -19,4 +19,6 @@
     <color name="search_color">#59F436</color>
     <color name="gray">#efefef</color>
     <color name="know_button">#DF3030</color>
+    <color name="new_background">#4157fa</color>
+    <color name="chip_color">#FFFFFF</color>
 </resources>
