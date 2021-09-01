@@ -67,6 +67,7 @@
     <string name="people_vaccinated_card_title">People vaccinated for one time</string>
     <string name="daily_vaccinations">Daily Vaccinations</string>
     <string name="country_daily_vaccinations">Country daily vaccinations :</string>
+    <string name="click_chips">Click The Chips</string>
 
 
 </resources>

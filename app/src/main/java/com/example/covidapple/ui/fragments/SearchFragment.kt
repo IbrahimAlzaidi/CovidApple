@@ -30,15 +30,21 @@ class SearchFragment:BaseFragment<FragmentSearchBinding>() {
         }
 
         binding?.totalVaccinationChip?.setOnClickListener {
-           binding?.totalVaccinationCardData?.text = Helper.abbreviateTheNumber(DataManger.getTotalVaccinationForAllCountries())
+            chipsClickListener("Total Vaccination:",Helper.abbreviateTheNumber(DataManger.getTotalVaccinationForAllCountries()))
         }
         binding?.peopleVaccinatedChip?.setOnClickListener {
-            binding?.peopleVaccinatedCardData?.text = Helper.abbreviateTheNumber(DataManger.getTotalPeopleVaccinatedOneTimeForAll())
+            chipsClickListener("Total people one Time Vaccinated:",Helper.abbreviateTheNumber(DataManger.getTotalPeopleVaccinatedOneTimeForAll()))
         }
 
         binding?.peopleFullyVaccinatedChip?.setOnClickListener {
-            binding?.dailyVaccinationsCardData?.text = Helper.abbreviateTheNumber(DataManger.getTotalDailyVaccinations())
+            chipsClickListener("Total Daily Vaccination:",Helper.abbreviateTheNumber(DataManger.getTotalDailyVaccinations()))
         }
+
+    }
+
+    private fun chipsClickListener(text: String, action: String) {
+        binding?.totalVaccinationCardTitle?.text = text
+        binding?.totalVaccinationCardData?.text = action
 
     }
 
