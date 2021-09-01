@@ -1,38 +1,103 @@
 package com.example.covidapple.ui.fragments
 
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.TextView
-import androidx.transition.TransitionManager
+import com.example.covidapple.R
+import com.example.covidapple.data.CovidSymptoms
+import com.example.covidapple.data.domain.CovidAdapter
 import com.example.covidapple.databinding.FragmentDetailsBinding
-import com.example.covidapple.databinding.FragmentHomeBinding
 
 
 class DetailsFragment:BaseFragment<FragmentDetailsBinding>() {
+    lateinit var imageId:Array<Int>
+    lateinit var arrayList:ArrayList<CovidSymptoms>
     override val LOG_TAG: String = "Info Fragment"
     override val bindingInflater: (LayoutInflater) -> FragmentDetailsBinding
         get() = FragmentDetailsBinding::inflate
 
     override fun setup() {
-        addExpandAbilty(binding?.symptomsText, binding?.readMoreSymptoms)
-        addExpandAbilty(binding?.preventionText, binding?.readMorePrevention)
+        setSymptompsInfo()
+        setPreventionInfo()
+        setVaccieneInfo()
+    }
+
+    private fun setPreventionInfo() {
+        imageId= arrayOf(
+            R.drawable.wash_hands,
+            R.drawable.use_facemask,
+            R.drawable.clean_surfaces,
+            R.drawable.distance,
+        )
+        binding?.symptomsRecycleView?.setHasFixedSize(true)
+        arrayList= arrayListOf<CovidSymptoms>()
+        getPreventionData()
+    }
+
+    private  fun setSymptompsInfo(){
+        imageId= arrayOf(
+            R.drawable.cough,
+            R.drawable.fever,
+            R.drawable.headache,
+            R.drawable.muscle_pain
+        )
+        binding?.symptomsRecycleView?.setHasFixedSize(true)
+        arrayList= arrayListOf<CovidSymptoms>()
+       getSymptompsData()
+    }
+    private  fun setVaccieneInfo(){
+        imageId= arrayOf(
+            R.drawable.vacciene_pfizer,
+            R.drawable.vacciene_johnson_and_johnson,
+            R.drawable.vacciene_green_apple,
+            R.drawable.vacciene_sinopharm,
+            R.drawable.vacciene_moderna,
+        )
+        binding?.vaccineRecycleView?.setHasFixedSize(true)
+        arrayList= arrayListOf<CovidSymptoms>()
+        getVaccieneData()
+    }
+
+    private fun getSymptompsData() {
+        imageId.forEachIndexed { index, i ->
+            val image = CovidSymptoms(imageId[index])
+            arrayList.add(image)
+        }
+        binding?.symptomsRecycleView?.adapter=CovidAdapter(arrayList)
+    }
+    private fun getPreventionData() {
+        imageId.forEachIndexed { index, i ->
+            val image = CovidSymptoms(imageId[index])
+            arrayList.add(image)
+        }
+        binding?.preventionRecyclerView?.adapter=CovidAdapter(arrayList)
+    }
+    private fun getVaccieneData() {
+        imageId.forEachIndexed { index, i ->
+            val image = CovidSymptoms(imageId[index])
+            arrayList.add(image)
+        }
+        binding?.vaccineRecycleView?.adapter=CovidAdapter(arrayList)
     }
 
     override fun addCallBack() {
+        binding?.buttonKnowMoreSymptoms!!.setOnClickListener {
+            val symptomsUrl ="https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"
+            showArticle(symptomsUrl)
+        }
+        binding?.buttonKnowMorePrevention!!.setOnClickListener {
+            val preventionUrl = "https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html"
+            showArticle(preventionUrl)
+        }
+
+    }
+
+    private fun showArticle(url: String) {
+        val intent = Intent(Intent.ACTION_VIEW)
+        intent.data= Uri.parse(url)
+        startActivity(intent)
 
     }
 
 
-
-    private fun addExpandAbilty(detailsText : TextView?, readMeView : TextView?){
-
-       readMeView?.setOnClickListener {
-           val isExpand = detailsText?.maxLines == Int.MAX_VALUE
-            TransitionManager.beginDelayedTransition(binding?.root as ViewGroup)
-            detailsText?.maxLines = if (isExpand) 2 else Int.MAX_VALUE
-            readMeView?.text = if (isExpand) "Read more" else "Show less"
-       }
-
-    }
 }
