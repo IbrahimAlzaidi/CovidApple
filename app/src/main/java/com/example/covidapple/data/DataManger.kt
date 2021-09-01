@@ -24,12 +24,6 @@ object DataManger {
      * @param country
      */
 
-    /**
-     *  Should change the description of the function into " This function take one parameter and
-     *  return the summation of vaccine unit of the country
-     *
-    */
-
     fun getTotalDailyVaccinationForCountry(country: String?) = vaccineList.filter {
         it.country?.equals(country, ignoreCase = true) == true
     }.sumOf { it.dailyVaccinations ?: 0 }

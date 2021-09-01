@@ -8,7 +8,6 @@ import com.example.covidapple.data.DataManger
 import com.example.covidapple.databinding.ActivityHomeBinding
 import com.example.covidapple.ui.fragments.*
 import com.example.covidapple.util.CsvParser
-import com.example.covidapple.util.log
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
@@ -64,7 +63,6 @@ class HomeActivity : AppCompatActivity() {
             val vaccine = parser.parse(line)
             DataManger.addVaccine(vaccine)
         }
-        //DataManger.getTotalVaccinationForAllCountries().log()
     }
 
 }
