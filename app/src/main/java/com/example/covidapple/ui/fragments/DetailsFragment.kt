@@ -47,11 +47,11 @@ class DetailsFragment:BaseFragment<FragmentDetailsBinding>() {
     }
     private  fun setVaccieneInfo(){
         imageId= arrayOf(
-            R.drawable.vacciene_pfizer,
-            R.drawable.vacciene_johnson_and_johnson,
-            R.drawable.vacciene_green_apple,
-            R.drawable.vacciene_sinopharm,
-            R.drawable.vacciene_moderna,
+            R.drawable.pfizer,
+            R.drawable.johnson_and_johnson,
+            R.drawable.green_apple,
+            R.drawable.senopharm,
+            R.drawable.moderna,
         )
         binding?.vaccineRecycleView?.setHasFixedSize(true)
         arrayList= arrayListOf<CovidSymptoms>()
