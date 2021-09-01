@@ -40,9 +40,33 @@
     <string name="team_member_description">Team Member of Apple team</string>
     <string name="name_rafal">Rafal A</string>
     <string name="credits">Credits</string>
-    <string name="countries_daily_vaccinations">Countries Daily Vaccinations</string>
+    <string name="people_Fully_Vaccinated">People Fully Vaccinated</string>
     <string name="mohammed_ehsan">Mohammed Ehsan</string>
     <string name="asawer_dawood">Asawer Dawood</string>
+    <string name="scrollView_discreption">homeFragment</string>
+    <string name="normal_circle">normal_circle</string>
+    <string name="normal_guy">normal_guy</string>
+    <string name="read_about_covid">Read about Covid-19 :</string>
+    <string name="ayman_github_button">ayman_GitHub_button</string>
+    <string name="ibrahim_github_button">ibrahim_Github_Button</string>
+    <string name="moe_github_button">moe_Github_Button</string>
+    <string name="rafal_github_button">rafal_Github_Button</string>
+    <string name="asawer_github_button">asawer_Github_Button</string>
+    <string name="about_fragment_image">about_Fragment_Image</string>
+    <string name="cards_to_show_data">cards_To_Show_Data</string>
+    <string name="people_vaccinated">People Vaccinated</string>
+    <string name="total_vaccination">Total vaccination</string>
+    <string name="people_fully_vaccinated">People Fully vaccinated</string>
+    <string name="data">Data</string>
+    <string name="total_vaccination_card">Total Vaccination</string>
+    <string name="example_daa">888</string>
+    <string name="know_more">Know more</string>
+    <string name="covid_19_symptoms">Covid-19 symptoms</string>
+    <string name="covid_19_prevention">Covid-19 prevention</string>
+    <string name="covid_19_vaccination">Covid-19 Vaccination</string>
+    <string name="people_vaccinated_card_title">People vaccinated for one time</string>
+    <string name="daily_vaccinations">Daily Vaccinations</string>
+    <string name="country_daily_vaccinations">Country daily vaccinations :</string>
 
 
 </resources>

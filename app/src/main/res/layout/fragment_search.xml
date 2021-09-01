@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/gray"
+    android:background="@color/new_background"
     android:layout_height="match_parent">
 
     <SearchView
@@ -13,6 +13,7 @@
         android:layout_margin="16dp"
         android:elevation="@dimen/cardview_default_elevation"
         android:focusable="auto"
+        android:background="@drawable/rec_white_shape"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -20,34 +21,273 @@
         android:iconifiedByDefault="false"
         android:inputType="text"
         android:queryHint="search country"
-        android:textColor="@color/black"
-        android:textColorHint="@android:color/darker_gray" />
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
 
-
-    <TextView
-        android:id="@+id/textview"
-        android:layout_width="wrap_content"
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView3"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="The Daily Vaccinated People"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/pie_chart"
+        android:layout_margin="16dp"
+        android:scrollbars="none"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search" />
+        app:layout_constraintTop_toBottomOf="@+id/search">
 
-    <org.eazegraph.lib.charts.PieChart
-        android:id="@+id/pie_chart"
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clipToPadding="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search"
+            app:singleLine="true">
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:id="@+id/total_vaccination_chip"
+                android:background="@drawable/rec_green_shape"
+                android:elevation="8dp"
+                android:text="@string/total_vaccination"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/search" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:id="@+id/people_vaccinated_chip"
+                android:background="@drawable/rec_green_shape"
+                android:text="@string/people_vaccinated"
+                android:elevation="8dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/search" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:id="@+id/people_fully_vaccinated_chip"
+                android:background="@drawable/rec_green_shape"
+                android:elevation="8dp"
+                android:maxLength="23"
+                android:text="@string/daily_vaccinations"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/search" />
+        </com.google.android.material.chip.ChipGroup>
+
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/data"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView3" />
+
+    <View
+        android:id="@+id/view2"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_marginBottom="24dp"
-        android:padding="8dp"
-        app:egLegendTextSize="18sp"
-        app:egUsePieRotation="true"
-        app:egValueTextSize="36sp"
+        android:layout_height="2dp"
+        android:layout_margin="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/cards_to_show_data"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scrollbars="none"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="220dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="14dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/total_Vaccination_Card_Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total_vaccination_card"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/total_Vaccination_Card_Data"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:text="@string/example_daa"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="220dp"
+                android:layout_height="120dp"
+                android:layout_marginEnd="14dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/people_Vaccinated_Card_Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/people_vaccinated_card_title"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/people_Vaccinated_Card_Data"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:text="@string/example_daa"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="220dp"
+                android:layout_height="120dp"
+                android:layout_marginEnd="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/daily_vaccinations_Card_Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/daily_vaccinations"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/daily_vaccinations_Card_Data"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:text="@string/example_daa"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.cardview.widget.CardView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </HorizontalScrollView>
+
+    <View
+        android:id="@+id/search_Fragment_Card"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:background="@drawable/card"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/search"
-        app:layout_constraintStart_toStartOf="@+id/search"
-        app:layout_constraintTop_toBottomOf="@+id/search" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/search_Fragment_Card_Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:text="@string/country_daily_vaccinations"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="@id/search_Fragment_Card"
+        app:layout_constraintEnd_toEndOf="@id/search_Fragment_Card"
+        app:layout_constraintTop_toTopOf="@id/search_Fragment_Card"/>
+
+    <org.eazegraph.lib.charts.BarChart
+        android:id="@+id/barchart"
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        android:padding="10dp"
+        app:egBarWidth="20dp"
+        app:egFixedBarWidth="true"
+        app:egLegendHeight="40dp"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/search_Fragment_Card_Title"
+        app:layout_constraintEnd_toEndOf="@+id/search_Fragment_Card_Title"
+        app:layout_constraintStart_toStartOf="@+id/search_Fragment_Card_Title" />
+
+
+        <!--    <org.eazegraph.lib.charts.PieChart-->
+<!--        android:id="@+id/pie_chart"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="300dp"-->
+<!--        android:layout_marginBottom="24dp"-->
+<!--        android:padding="8dp"-->
+<!--        app:egLegendTextSize="18sp"-->
+<!--        app:egUsePieRotation="true"-->
+<!--        app:egValueTextSize="36sp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/search"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/search"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/search" />-->
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

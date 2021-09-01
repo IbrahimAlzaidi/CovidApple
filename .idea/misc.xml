@@ -49,14 +49,41 @@
         <entry key="..\:/Users/jucko/Desktop/CovidApple/app/src/main/res/layout/fragment_search.xml" value="0.1935185185185185" />
         <entry key="..\:/Users/jucko/Desktop/CovidApple/app/src/main/res/layout/fragment_vaccination.xml" value="0.25" />
         <entry key="..\:/Users/jucko/Desktop/CovidApple/app/src/main/res/layout/item_vaccination.xml" value="0.20416666666666666" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable-v24/ic_github.xml" value="0.2703125" />
         <entry key="..\:/pleaseGithub/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable-v24/social_media_shape.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/card_shape.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/hero_image.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_apple.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_clean_surface.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_clean_surfaces.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_cough.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_distance.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_fever.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_headache.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_muscle_pain.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_prevention_clean_surface.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_prevention_keep_distance.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_prevention_wash_hands.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_prevention_wear_mask.xml" value="0.2703125" />
         <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_splash_screen_image.xml" value="0.2703125" />
         <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_vector_apple.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_wash_hands.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/ic_wear_face_mask.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/know_more_button.xml" value="0.2703125" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/drawable/rec_white_shape.xml" value="0.2703125" />
         <entry key="..\:/pleaseGithub/app/src/main/res/drawable/splash_screen.xml" value="0.2703125" />
         <entry key="..\:/pleaseGithub/app/src/main/res/layout/activity_home.xml" value="0.264" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/layout/fragment_details.xml" value="0.264" />
         <entry key="..\:/pleaseGithub/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/layout/fragment_info.xml" value="0.2462686567164179" />
         <entry key="..\:/pleaseGithub/app/src/main/res/layout/fragment_search.xml" value="0.24010416666666667" />
         <entry key="..\:/pleaseGithub/app/src/main/res/layout/fragment_second.xml" value="0.25416666666666665" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/layout/fragment_vaccination.xml" value="0.18432971014492755" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/layout/item_covid_info.xml" value="0.536" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/layout/item_vaccienes.xml" value="0.25416666666666665" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/layout/item_vaccination.xml" value="0.18432971014492755" />
+        <entry key="..\:/pleaseGithub/app/src/main/res/menu/main_button_nav.xml" value="0.25416666666666665" />
         <entry key="..\:/pleaseGithub/app/src/main/res/menu/navigation_menu.xml" value="0.25416666666666665" />
       </map>
     </option>

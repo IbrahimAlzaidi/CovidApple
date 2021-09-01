@@ -1,14 +1,13 @@
 package com.example.covidapple.ui.fragments
 
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.SearchView
 import com.example.covidapple.data.DataManger
 
 import com.example.covidapple.databinding.FragmentSearchBinding
-import org.eazegraph.lib.models.PieModel
-import kotlin.random.Random
+import com.example.covidapple.util.Helper
+import org.eazegraph.lib.models.BarModel
 
 class SearchFragment:BaseFragment<FragmentSearchBinding>() {
     override val LOG_TAG: String = "Search Fragment"
@@ -16,7 +15,7 @@ class SearchFragment:BaseFragment<FragmentSearchBinding>() {
         get() = FragmentSearchBinding::inflate
 
     override fun setup() {
-        binding?.pieChart?.visibility = View.INVISIBLE
+        binding?.barchart?.visibility = View.INVISIBLE
     }
 
     override fun addCallBack() {
@@ -29,20 +28,34 @@ class SearchFragment:BaseFragment<FragmentSearchBinding>() {
             })
             search.queryHint = "Looking for Country, Type it's Name"
         }
+
+        binding?.totalVaccinationChip?.setOnClickListener {
+           binding?.totalVaccinationCardData?.text = Helper.abbreviateTheNumber(DataManger.getTotalVaccinationForAllCountries())
+        }
+        binding?.peopleVaccinatedChip?.setOnClickListener {
+            binding?.peopleVaccinatedCardData?.text = Helper.abbreviateTheNumber(DataManger.getTotalPeopleVaccinatedOneTimeForAll())
+        }
+
+        binding?.peopleFullyVaccinatedChip?.setOnClickListener {
+            binding?.dailyVaccinationsCardData?.text = Helper.abbreviateTheNumber(DataManger.getTotalDailyVaccinations())
+        }
+
     }
 
     private fun search(country: String): Boolean {
         binding?.apply {
-            binding?.pieChart?.visibility = View.VISIBLE
-             DataManger.getVaccinationMapOfCountry(country).forEach { (t, u) ->
-                    binding?.pieChart?.addPieSlice(u?.toFloat()?.let {
-                    PieModel(t,
-                        it, Color.argb(255, Random.nextInt(50, 200),
-                            Random.nextInt(50, 250), Random.nextInt(50, 250)))
+            binding?.barchart?.visibility = View.VISIBLE
+             DataManger.getVaccinationMapOfCountry(country).forEach { (k, v) ->
+                    binding?.barchart?.addBar(v?.toFloat()?.let {
+                    BarModel(k,
+                        it, Helper.colorSet()
+                    )
                 })
             }
-            binding?.pieChart?.startAnimation()
+            binding?.barchart?.startAnimation()
         }
         return false
     }
+
+
 }

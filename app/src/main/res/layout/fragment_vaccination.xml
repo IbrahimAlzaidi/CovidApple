@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.fragments.VaccinationFragment"
-    android:background="@color/gray">
+    android:background="@color/new_background">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -15,11 +15,11 @@
             android:id="@+id/text_daily_vaccination"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/countries_daily_vaccinations"
+            android:text="@string/people_Fully_Vaccinated"
             android:layout_marginTop="32dp"
             android:layout_marginStart="8dp"
             android:textSize="@dimen/vacc_size"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -30,6 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            tools:listitem="@layout/item_vaccination"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

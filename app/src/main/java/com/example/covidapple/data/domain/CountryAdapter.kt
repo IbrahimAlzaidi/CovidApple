@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.covidapple.R
 import com.example.covidapple.data.DataManger
 import com.example.covidapple.databinding.ItemVaccinationBinding
+import com.example.covidapple.util.Helper
+import com.google.android.material.imageview.ShapeableImageView
 
 class CountryAdapter(private val list: List<Pair<String?, Int?>>):RecyclerView.Adapter<CountryAdapter.CountryViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CountryViewHolder {
@@ -23,7 +25,7 @@ class CountryAdapter(private val list: List<Pair<String?, Int?>>):RecyclerView.A
       holder.binding.apply {
           textCountryName.text = currentValue.first
           textCountryValue.text =
-              currentValue.second?.let { DataManger.abbreviateTheNumber(it.toLong()) }
+              currentValue.second?.let { Helper.abbreviateTheNumber(it.toLong()) }
 
       }
     }
