@@ -71,7 +71,7 @@
                 android:background="@drawable/rec_green_shape"
                 android:elevation="8dp"
                 android:maxLength="23"
-                android:text="@string/people_fully_vaccinated"
+                android:text="@string/daily_vaccinations"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintTop_toBottomOf="@+id/search" />
@@ -184,7 +184,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/people_Vaccination_Card_Data"
+                        android:id="@+id/people_Vaccinated_Card_Data"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="18dp"
@@ -213,16 +213,16 @@
                     android:padding="4dp">
 
                     <TextView
-                        android:id="@+id/people_Fully_Vaccination_Card_Title"
+                        android:id="@+id/daily_vaccinations_Card_Title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/people_fully_vaccinated_card_title"
+                        android:text="@string/daily_vaccinations"
                         android:textColor="@color/black"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/people_Fully_Vaccination_Card_Data"
+                        android:id="@+id/daily_vaccinations_Card_Data"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="18dp"

@@ -77,7 +77,24 @@ object DataManger {
             it.country?.equals(country, ignoreCase = true) == true
         }.maxOf { it.totalVaccinations ?: 0 }
 
-//    fun getTotalVaccinationForAllCountries() = vaccineList.groupBy {
-//        it.country}.keys.associateWith { getTotalVaccinationForCountry(it) }.map { it.value }.sumOf { }
+    fun getTotalVaccinationForAllCountries() : Long = vaccineList.groupBy {
+        it.country}.keys.associateWith { getTotalVaccinationForCountry(it) }.toList().sumByDouble { it.second.toDouble() }.toLong()
 
+
+    private fun getTotalPeopleVaccinatedOneTimeForCountry(country: String?) =
+        vaccineList.filter {
+            it.country?.equals(country, ignoreCase = true) == true
+        }.maxOf { it.peopleVaccinated ?: 0 }
+
+    fun getTotalPeopleVaccinatedOneTimeForAll() : Long = vaccineList.groupBy {
+        it.country}.keys.associateWith { getTotalPeopleVaccinatedOneTimeForCountry(it) }.toList().sumByDouble { it.second.toDouble() }.toLong()
+
+
+    private fun getTotalDailyVaccinationsForCountry(country: String?) =
+        vaccineList.filter {
+            it.country?.equals(country, ignoreCase = true) == true
+        }.sumOf { it.dailyVaccinations ?: 0 }
+
+    fun getTotalDailyVaccinations() = vaccineList.groupBy {
+        it.country}.keys.associateWith { getTotalDailyVaccinationsForCountry(it) }.toList().sumByDouble { it.second.toDouble() }.toLong()
 }

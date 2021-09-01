@@ -30,11 +30,14 @@ class SearchFragment:BaseFragment<FragmentSearchBinding>() {
         }
 
         binding?.totalVaccinationChip?.setOnClickListener {
-//            binding?.totalVaccinationCardData?.text = Helper.abbreviateTheNumber(DataManger.getTotalVaccinationForAllCountries())
+           binding?.totalVaccinationCardData?.text = Helper.abbreviateTheNumber(DataManger.getTotalVaccinationForAllCountries())
         }
         binding?.peopleVaccinatedChip?.setOnClickListener {
+            binding?.peopleVaccinatedCardData?.text = Helper.abbreviateTheNumber(DataManger.getTotalPeopleVaccinatedOneTimeForAll())
         }
+
         binding?.peopleFullyVaccinatedChip?.setOnClickListener {
+            binding?.dailyVaccinationsCardData?.text = Helper.abbreviateTheNumber(DataManger.getTotalDailyVaccinations())
         }
 
     }
